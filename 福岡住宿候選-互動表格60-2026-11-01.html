@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡住宿候選・互動表格 60｜7人・2026/11/1–11/6</title>
+<style>
+  :root{--bg:#f4f6f8;--card:#fff;--ink:#1d2733;--sub:#647082;--line:#e2e7ee;--accent:#1f6f8b;--accent2:#2c7a4b;--gold:#9a6a1b;--wc:#0b6e75;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.45;padding:0 0 50px}
+  header{background:linear-gradient(135deg,#1f6f8b,#243b45);color:#fff;padding:24px 22px 20px}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+  header h1{font-size:1.3rem}
+  header p{color:#cfe1e8;margin-top:5px;font-size:.86rem}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:16px 0;box-shadow:0 1px 6px rgba(0,0,0,.04)}
+  .filters{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end}
+  .fg{display:flex;flex-direction:column;gap:4px}
+  .fg label{font-size:.74rem;color:var(--sub);font-weight:600}
+  .fg input,.fg select{font-size:.86rem;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;min-width:120px}
+  .fg input[type=search]{min-width:200px}
+  .chk{flex-direction:row;align-items:center;gap:6px}
+  .chk input{min-width:auto}
+  .reset{font-size:.82rem;padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:#f0f3f7;cursor:pointer;color:var(--ink)}
+  .reset:hover{background:#e3e9f0}
+  .count{font-size:.85rem;color:var(--sub);margin:10px 2px}
+  .count b{color:var(--accent)}
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+  table{width:100%;border-collapse:collapse;font-size:.83rem;min-width:980px}
+  thead th{background:#eef2f6;color:#33414f;text-align:left;padding:10px 11px;border-bottom:2px solid var(--line);position:sticky;top:0;cursor:pointer;white-space:nowrap;user-select:none}
+  thead th.nosort{cursor:default}
+  thead th .ar{color:#9aa7b5;font-size:.7rem;margin-left:3px}
+  tbody td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:middle}
+  tbody tr:hover{background:#f7fafc}
+  .cat-tag{display:inline-block;font-size:.7rem;font-weight:700;color:#fff;border-radius:5px;padding:1px 7px}
+  .nm{font-weight:600;color:var(--ink)}
+  .st{color:var(--accent);font-weight:600;white-space:nowrap}
+  .wc-ok{color:#fff;background:var(--wc);font-weight:700;font-size:.72rem;border-radius:5px;padding:1px 6px}
+  .wc-q{color:var(--sub);font-size:.78rem}
+  .lug-f{color:#2c7a4b;font-weight:600;font-size:.78rem}
+  .lug-n{color:#9a6a1b;font-size:.78rem}
+  .pr{font-weight:700;color:var(--gold);white-space:nowrap}
+  .map{color:#fff;background:#1a73e8;text-decoration:none;font-size:.75rem;padding:3px 8px;border-radius:5px;white-space:nowrap}
+  .nomap{color:#b03030;font-size:.74rem}
+  .off{color:var(--accent);text-decoration:none;font-size:.78rem}
+  .legend{font-size:.78rem;color:var(--sub);margin-top:12px;line-height:1.7}
+  .legend b{color:#33414f}
+  @media(max-width:640px){header h1{font-size:1.1rem}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>福岡住宿候選・互動整合表格（60 間）</h1>
+  <p>7 人｜2026/11/1–11/6（5 晚）｜全部近站｜可搜尋・篩選・排序｜含 Google Maps・廁所數・行李寄放</p>
+</div></header>
+
+<div class="wrap">
+  <div class="panel">
+    <div class="filters">
+      <div class="fg"><label>🔎 關鍵字（名稱/區域）</label><input type="search" id="q" placeholder="例：博多水庭、町家、中洲…"></div>
+      <div class="fg"><label>類型</label><select id="fcat">
+        <option value="">全部類型</option>
+        <option value="A">A 公寓式</option><option value="B">B 團體一棟</option>
+        <option value="C">C 和風町家</option><option value="D">D 真透天</option>
+        <option value="E">E 市區 villa</option><option value="F">F 連鎖</option>
+      </select></div>
+      <div class="fg"><label>區域／車站</label><select id="farea"><option value="">全部區域</option></select></div>
+      <div class="fg"><label>最少容納人數</label><input type="number" id="fcap" min="1" max="30" value="7" style="min-width:90px"></div>
+      <div class="fg"><label>每人/晚上限(NT$)</label><input type="number" id="fprice" min="0" step="100" placeholder="不限" style="min-width:110px"></div>
+      <div class="fg chk"><input type="checkbox" id="fwc"><label for="fwc">只看廁所 ≥2（已確認）</label></div>
+      <div class="fg"><label>行李寄放</label><select id="flug">
+        <option value="">全部</option><option value="前台">前台(需確認)</option><option value="無人">無人·需洽</option>
+      </select></div>
+      <button class="reset" id="reset">重設</button>
+    </div>
+  </div>
+
+  <div class="count" id="count"></div>
+
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead><tr>
+        <th class="nosort">#</th>
+        <th data-k="name">名稱<span class="ar">↕</span></th>
+        <th data-k="cat">類型<span class="ar">↕</span></th>
+        <th data-k="area">區域／最近站<span class="ar">↕</span></th>
+        <th data-k="cap" style="text-align:center">容納<span class="ar">↕</span></th>
+        <th data-k="wcSort" style="text-align:center">廁所<span class="ar">↕</span></th>
+        <th data-k="lug">行李寄放</th>
+        <th data-k="price" style="text-align:right">每人/晚估<span class="ar">↕</span></th>
+        <th class="nosort">地圖</th>
+        <th class="nosort">官方</th>
+      </tr></thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </div>
+
+  <div class="legend">
+    <b>說明：</b>📍 地圖＝以實際地址組的 Google Maps 搜尋連結，查不到確切地址者標「找不到」（不亂給座標）。🚻 深綠＝廁所/浴室 ≥2 已確認；其餘「查證」為官方未公開需洽。🧳 行李：有前台之飯店標「前台(需確認)」、無人民宿標「無人·需洽」——皆無官方明文，訂房時請直接問。💰 每人/晚為估算（NT$1≒¥4.7、7 人均攤）。容量為單一單元上限，部分小房型 7 人需訂 2 間。所有資料出發前以官方即時頁為準。<br>
+    <b>排序：</b>點欄位標題可升/降冪排序。<b>近站庫存集中於 A 公寓式與 C 町家，D 真透天、E 市區 villa 先天稀少。</b>
+  </div>
+</div>
+
+<script>
+const M="https://www.google.com/maps/search/?api=1&query=";
+const catColor={A:"#2c7a4b",B:"#b5532e",C:"#9a6a1b",D:"#2f6f5e",E:"#6a4c93",F:"#43525e"};
+const catName={A:"公寓式",B:"團體一棟",C:"和風町家",D:"真透天",E:"市區villa",F:"連鎖"};
+// addr=地址(null=找不到), wc=廁所數(數字=確認,null=查證), lug:'前台'|'無人'
+const D=[
+ {id:1,name:"福岡 Condominium 5-G",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:10,capT:"10名·3房",wc:null,wcShow:"估1",lug:"無人",price:833,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/5-g/"},
+ {id:2,name:"福岡 Condominium 7-F",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:9,capT:"9名·2房畳",wc:null,wcShow:"查證",lug:"無人",price:833,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/7-f/"},
+ {id:3,name:"福岡 Condominium 4-A",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:8,capT:"8名·2房",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/4-a/"},
+ {id:4,name:"福岡 Condominium 4-C",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:8,capT:"8名·2房",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/4-c/"},
+ {id:5,name:"福岡 Condominium 4-H",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:10,capT:"10名",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/4-h/"},
+ {id:6,name:"福岡 Condominium 5-F",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:7,capT:"7名·2房",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/5-f/"},
+ {id:7,name:"福岡 Condominium 6-D",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:7,capT:"7名·2房畳",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/6-d/"},
+ {id:8,name:"福岡 Condominium 6-H",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:10,capT:"10名·2房",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/6-h/"},
+ {id:9,name:"福岡 Condominium 7-G",cat:"A",area:"博多駅",st:"博多駅 徒步10分",cap:10,capT:"10名",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/7-g/"},
+ {id:10,name:"福岡 Condominium EAST-1F",cat:"A",area:"博多駅",st:"博多駅 徒步13分",cap:10,capT:"10名·2房",wc:null,wcShow:"查證",lug:"無人",price:750,addr:"福岡市博多区博多駅東2-13-25",off:"https://fukuoka-hotel.jp/about/guestroom/east-1f/"},
+ {id:11,name:"福岡 Condominium EAST-2F",cat:"A",area:"博多駅",st:"博多駅 徒步13分",cap:16,capT:"16名",wc:null,wcShow:"查證",lug:"無人",price:650,addr:"福岡市博多区博多駅東2-13-25",off:"https://fukuoka-hotel.jp/about/guestroom/east-2f/"},
+ {id:12,name:"ザ・レジデンシャルスイート福岡",cat:"A",area:"西新/ももち",st:"西新駅 徒步10分",cap:6,capT:"6名/室(訂2室)",wc:null,wcShow:"查證",lug:"前台",price:1200,addr:"福岡市早良区百道浜1-3-70",off:"https://www.trs-fukuoka.co.jp/"},
+ {id:13,name:"ランドーホテル福岡",cat:"A",area:"天神/渡辺通",st:"清川/渡辺通(查證)",cap:4,capT:"4名/室(訂2室)",wc:null,wcShow:"查證",lug:"前台",price:1000,addr:"福岡市中央区清川1-2-3",off:"https://www.randor.asia/hotel-fukuoka"},
+ {id:14,name:"ホテルリファレンス博多コンドミニアム",cat:"A",area:"博多駅",st:"博多駅 徒步6分",cap:6,capT:"公寓式",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅南1-3-24",off:"https://re-hotel.jp/hakata-condo/"},
+ {id:15,name:"アパートメントホテル天神 TUMUGU",cat:"A",area:"天神/渡辺通",st:"渡辺通駅 徒步3–4分",cap:5,capT:"全7室公寓",wc:null,wcShow:"查證",lug:"無人",price:1000,addr:"福岡市中央区渡辺通3-7-11",off:"https://www.jalan.net/yad397878/"},
+ {id:16,name:"ROOMS 福岡",cat:"A",area:"天神/渡辺通",st:"天神駅 徒步數分",cap:6,capT:"長住型公寓",wc:null,wcShow:"查證",lug:"無人",price:1000,addr:"福岡市中央区天神1-9-17",off:"https://roomsfukuoka.com/"},
+ {id:17,name:"東急ステイ福岡天神",cat:"A",area:"天神/渡辺通",st:"天神南駅 徒步3分",cap:2,capT:"2名/室(7人訂多間)",wc:null,wcShow:"每室1",lug:"前台",price:1300,addr:"福岡市中央区春吉3-21-24",off:"https://www.tokyustay.co.jp/hotel/FT/"},
+
+ {id:18,name:"TABISAI HOUSE 博多",cat:"B",area:"博多駅",st:"博多駅 徒步7分",cap:16,capT:"16名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:"福岡市博多区住吉4-6-19",off:"https://tabisaihotel.com/house/"},
+ {id:19,name:"TABISAI GRANDE 博多",cat:"B",area:"博多駅",st:"博多駅 徒步11–13分",cap:21,capT:"21名·4房",wc:2,wcShow:"浴2+各層廁所",lug:"無人",price:1700,addr:"福岡市博多区冷泉町2-19-1",off:"https://tabisaihotel.com/grande/"},
+ {id:20,name:"TABISAI TERRACE 博多",cat:"B",area:"博多駅",st:"博多駅 徒步12分",cap:17,capT:"17名·4房",wc:2,wcShow:"浴2",lug:"無人",price:1700,addr:"福岡市博多区美野島1-9-5",off:"https://tabisaihotel.com/terrace/"},
+ {id:21,name:"TABISAI PREMIUM 博多-中洲",cat:"B",area:"中洲川端",st:"中洲川端駅 徒步2分",cap:15,capT:"15名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:"福岡市博多区綱場町1-15",off:"https://tabisaihotel.com/premium/"},
+ {id:22,name:"TABISAI LUXE 博多",cat:"B",area:"祇園",st:"祇園駅 徒步2分",cap:20,capT:"20名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:null,off:"https://www.jalan.net/yad344378/"},
+ {id:23,name:"TABISAI SUITE 博多",cat:"B",area:"祇園",st:"祇園駅 徒步1分",cap:16,capT:"16名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:null,off:"https://tabisaihotel.com/suite/"},
+ {id:24,name:"TABISAI ALLEY 天神 (2026新)",cat:"B",area:"天神/渡辺通",st:"渡辺通駅 徒步10分",cap:22,capT:"22名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:null,off:"https://tabisaihotel.com/alley-2/"},
+ {id:25,name:"TABISAI SWELL 天神 (2026新)",cat:"B",area:"天神/渡辺通",st:"渡辺通駅 徒步10分",cap:20,capT:"20名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:"福岡市中央区高砂2-22-12",off:"https://travel.rakuten.co.jp/HOTEL/195920/195920.html"},
+ {id:26,name:"TABISAI LUNON 天神 (2026新)",cat:"B",area:"天神/渡辺通",st:"渡辺通駅 徒步10分",cap:19,capT:"19名",wc:2,wcShow:"浴2",lug:"無人",price:1800,addr:"福岡市中央区清川2-18-14",off:"https://travel.rakuten.co.jp/HOTEL/195919/195919.html"},
+ {id:27,name:"AIRSTAR HOTEL Second",cat:"B",area:"春吉",st:"渡辺通/天神南駅 徒步10分",cap:25,capT:"25名·7房",wc:4,wcShow:"廁所4+浴2",lug:"無人",price:1800,addr:null,off:"https://prtimes.jp/main/html/rd/p/000000020.000054152.html"},
+ {id:28,name:"AIRSTAR 春吉 ×Cube Patio",cat:"B",area:"春吉",st:"中洲川端/天神南駅 徒步圏",cap:10,capT:"大人數",wc:null,wcShow:"查證",lug:"無人",price:1500,addr:null,off:"https://www.booking.com/hotel/jp/airstarchun-ji.html"},
+
+ {id:29,name:"彩ホテル 茜",cat:"C",area:"呉服町",st:"呉服町駅 近",cap:8,capT:"8名",wc:null,wcShow:"1–2(查證)",lug:"無人",price:900,addr:"福岡市博多区上呉服町8-1-2",off:"https://www.nan-ei.com/irodori/"},
+ {id:30,name:"彩ホテル 鶯",cat:"C",area:"呉服町",st:"呉服町駅 近",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区上呉服町8-1-1",off:"https://www.nan-ei.com/irodori/"},
+ {id:31,name:"彩ホテル 唐",cat:"C",area:"千代県庁口",st:"千代県庁口駅 近",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区千代2-4-7",off:"https://www.nan-ei.com/irodori/"},
+ {id:32,name:"彩ホテル 藤",cat:"C",area:"博多駅",st:"博多駅 圏(堅粕)",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕5-4-26-2",off:"https://www.nan-ei.com/irodori/"},
+ {id:33,name:"彩ホテル 橙",cat:"C",area:"博多駅",st:"博多駅 圏(堅粕)",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕5-4-26-1",off:"https://www.nan-ei.com/irodori/"},
+ {id:34,name:"彩ホテル 桃",cat:"C",area:"博多駅",st:"博多駅 圏(堅粕)",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕4-2-21",off:"https://www.nan-ei.com/irodori/"},
+ {id:35,name:"彩ホテル 柳",cat:"C",area:"博多駅",st:"博多駅 圏(堅粕)",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕4-2-20",off:"https://www.nan-ei.com/irodori/"},
+ {id:36,name:"彩ホテル 藍",cat:"C",area:"薬院/平尾",st:"西鉄薬院/渡辺通 一帶",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市中央区清川2-15-8",off:"https://www.nan-ei.com/irodori/"},
+ {id:37,name:"彩ホテル 菜",cat:"C",area:"薬院/平尾",st:"渡辺通駅 徒步12分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市中央区清川3-32-17",off:"https://www.nan-ei.com/irodori/"},
+ {id:38,name:"彩ホテル 空",cat:"C",area:"博多駅",st:"博多駅 圏(美野島)",cap:10,capT:"10名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区美野島2-21-14",off:"https://www.nan-ei.com/irodori/"},
+ {id:39,name:"彩ホテル 狐",cat:"C",area:"博多駅",st:"博多駅 圏(美野島)",cap:10,capT:"10名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区美野島2-21-13",off:"https://www.nan-ei.com/irodori/"},
+ {id:40,name:"彩ホテル 煌",cat:"C",area:"中洲川端",st:"呉服町/中洲川端 一帶",cap:10,capT:"10名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区大博町6-3",off:"https://www.nan-ei.com/irodori/"},
+ {id:41,name:"彩ホテル 翠",cat:"C",area:"中洲川端",st:"呉服町/中洲川端 一帶",cap:10,capT:"10名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区大博町6-3",off:"https://www.nan-ei.com/irodori/"},
+ {id:42,name:"彩ホテル 曙",cat:"C",area:"博多駅",st:"博多駅 圏(住吉)",cap:12,capT:"12名",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区住吉5-11-7",off:"https://www.nan-ei.com/irodori/"},
+ {id:43,name:"彩ホテル 天",cat:"C",area:"博多駅",st:"博多駅 圏(住吉)",cap:12,capT:"12名",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区住吉5-11-7-1",off:"https://www.nan-ei.com/irodori/"},
+ {id:44,name:"MUSUBI 町家 奈良屋町1",cat:"C",area:"中洲川端",st:"中洲川端駅 徒步5分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:1100,addr:"福岡市博多区奈良屋町4-5",off:"https://www.expedia.co.jp/Fukuoka-Hotels-Musubi-Hotel-Machiya-Naraya-Machi-1.h41835566.Hotel-Information"},
+ {id:45,name:"MUSUBI 町家 奈良屋町2",cat:"C",area:"中洲川端",st:"中洲川端駅 徒步5分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:1100,addr:"福岡市博多区奈良屋町4-5",off:"https://www.jalan.net/yad321177/"},
+ {id:46,name:"MUSUBI 町家 堅粕1",cat:"C",area:"博多駅",st:"博多駅 徒步8–10分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕5-4-1",off:"https://domhotel.airtrip.jp/hotel/detail/39209H567"},
+ {id:47,name:"MUSUBI 町家 堅粕2",cat:"C",area:"博多駅",st:"博多駅 徒步8–10分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕5-4-1",off:"https://hotelbank.jp/airbnb-minpaku/musubi-hotel-machiya-katakasu-1-2-3-4/"},
+ {id:48,name:"MUSUBI 町家 堅粕3",cat:"C",area:"博多駅",st:"博多駅 徒步8–10分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕5-4-1",off:"https://hotelbank.jp/airbnb-minpaku/musubi-hotel-machiya-katakasu-1-2-3-4/"},
+ {id:49,name:"MUSUBI 町家 堅粕4",cat:"C",area:"博多駅",st:"博多駅 徒步8–10分",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区堅粕5-4-1",off:"https://domhotel.airtrip.jp/hotel/detail/39209H538"},
+ {id:50,name:"MUSUBI 町家 春吉",cat:"C",area:"春吉",st:"渡辺通駅 徒步數分",cap:8,capT:"7–8名",wc:null,wcShow:"查證",lug:"無人",price:1100,addr:"福岡市中央区春吉2-7-16",off:"https://www.hotel.trippod.jp/hotels/f001"},
+ {id:51,name:"MUSUBI 町家 清川1",cat:"C",area:"薬院/平尾",st:"西鉄平尾/渡辺通駅 徒步圏",cap:8,capT:"8名",wc:null,wcShow:"查證",lug:"無人",price:1100,addr:"福岡市中央区清川2-15-8",off:"https://domhotel.airtrip.jp/hotel/detail/39209H410"},
+ {id:52,name:"博多町家ホテル Kamigofuku",cat:"C",area:"呉服町",st:"呉服町駅 徒步6分",cap:8,capT:"8名",wc:null,wcShow:"洗浄付廁所(查證)",lug:"無人",price:1100,addr:"福岡市博多区上呉服町9-2",off:"https://domhotel.airtrip.jp/hotel/detail/39209H588"},
+
+ {id:53,name:"千代県庁口 一戸建て",cat:"D",area:"千代県庁口",st:"千代県庁口駅 徒步5分",cap:10,capT:"10名·3房",wc:null,wcShow:"1F1(2F查證)",lug:"無人",price:1200,addr:null,off:"https://www.expedia.co.jp/Fukuoka-Hotels-1-Station-From-Hakata-Station-Entire-Homes-Can-Be-Fukuoka-Fukuoka.h57376030.Hotel-Information"},
+
+ {id:54,name:"博多水庭（私人泳池+桑拿 Villa）",cat:"E",area:"呉服町",st:"呉服町駅 徒步6分",cap:8,capT:"8名",wc:2,wcShow:"2(1F+2F)",lug:"無人",price:3700,addr:"福岡市博多区上呉服町13-28",off:"https://advance-resort.com/hakatasuitei"},
+ {id:55,name:"合い宿 すみよし（私人桑拿）",cat:"E",area:"博多駅",st:"博多駅 徒步10分",cap:6,capT:"6名(7人需確認)",wc:null,wcShow:"查證",lug:"無人",price:1800,addr:"福岡市博多区住吉5-14-16",off:"https://aiyado-sumiyoshi.com/"},
+
+ {id:56,name:"Rakuten STAY 博多祇園（Deluxe）",cat:"F",area:"呉服町",st:"呉服町駅 徒步5分",cap:8,capT:"8名",wc:null,wcShow:"浴/廁分離(查證)",lug:"無人",price:850,addr:"福岡市博多区上呉服町12-31",off:"https://stay.rakuten.co.jp/hakata-gion/"},
+ {id:57,name:"Rakuten STAY 博多祇園（Superior）",cat:"F",area:"呉服町",st:"呉服町駅 徒步5分",cap:6,capT:"6名",wc:null,wcShow:"查證",lug:"無人",price:900,addr:"福岡市博多区上呉服町12-31",off:"https://stay.rakuten.co.jp/hakata-gion/"},
+ {id:58,name:"Rakuten STAY 福岡薬院",cat:"F",area:"薬院/平尾",st:"西鉄薬院/薬院駅 徒步圏",cap:8,capT:"8名定員",wc:null,wcShow:"查證",lug:"無人",price:900,addr:null,off:"https://rakutenstayroom.fukuokajhotel.com/en/"},
+ {id:59,name:"Rakuten STAY 博多駅北",cat:"F",area:"博多駅",st:"博多駅 徒步圏",cap:6,capT:"家庭/團體(訂2室)",wc:null,wcShow:"查證",lug:"無人",price:900,addr:null,off:"https://yado.knt.co.jp/st/S400326/"},
+ {id:60,name:"福岡 Condominium 6-C（備選）",cat:"F",area:"博多駅",st:"博多駅 徒步10分",cap:6,capT:"6名",wc:null,wcShow:"查證",lug:"無人",price:800,addr:"福岡市博多区博多駅前3-12-3",off:"https://fukuoka-hotel.jp/about/guestroom/6-c/"}
+];
+
+// area dropdown
+const areas=[...new Set(D.map(d=>d.area))];
+const fa=document.getElementById('farea');
+areas.forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=a;fa.appendChild(o);});
+
+let sortKey="id",sortDir=1;
+const tb=document.getElementById('tb'),cnt=document.getElementById('count');
+const q=document.getElementById('q'),fcat=document.getElementById('fcat'),fcap=document.getElementById('fcap'),fprice=document.getElementById('fprice'),fwc=document.getElementById('fwc'),flug=document.getElementById('flug');
+
+function render(){
+  let rows=D.filter(d=>{
+    const kw=q.value.trim().toLowerCase();
+    if(kw && !(d.name.toLowerCase().includes(kw)||d.area.toLowerCase().includes(kw)||d.st.toLowerCase().includes(kw))) return false;
+    if(fcat.value && d.cat!==fcat.value) return false;
+    if(fa.value && d.area!==fa.value) return false;
+    if(fcap.value && d.cap<parseInt(fcap.value)) return false;
+    if(fprice.value && d.price>parseInt(fprice.value)) return false;
+    if(fwc.checked && !(d.wc&&d.wc>=2)) return false;
+    if(flug.value && d.lug!==flug.value) return false;
+    return true;
+  });
+  rows.sort((a,b)=>{
+    let va,vb;
+    if(sortKey==="wcSort"){va=a.wc||0;vb=b.wc||0;}
+    else if(sortKey==="name"){va=a.name;vb=b.name;}
+    else if(sortKey==="cat"){va=a.cat;vb=b.cat;}
+    else if(sortKey==="area"){va=a.area;vb=b.area;}
+    else if(sortKey==="lug"){va=a.lug;vb=b.lug;}
+    else {va=a[sortKey];vb=b[sortKey];}
+    if(typeof va==="string"){return va.localeCompare(vb,'ja')*sortDir;}
+    return (va-vb)*sortDir;
+  });
+  tb.innerHTML=rows.map((d,i)=>{
+    const map=d.addr?`<a class="map" target="_blank" href="${M}${encodeURIComponent(d.addr)}">📍地圖</a>`:`<span class="nomap">找不到</span>`;
+    const wc=(d.wc&&d.wc>=2)?`<span class="wc-ok">🚻${d.wcShow}</span>`:`<span class="wc-q">${d.wcShow}</span>`;
+    const lug=d.lug==="前台"?`<span class="lug-f">🧳前台(需確認)</span>`:`<span class="lug-n">🧳無人·需洽</span>`;
+    return `<tr>
+      <td>${d.id}</td>
+      <td class="nm">${d.name}</td>
+      <td><span class="cat-tag" style="background:${catColor[d.cat]}">${d.cat}·${catName[d.cat]}</span></td>
+      <td><span class="st">${d.st}</span></td>
+      <td style="text-align:center">${d.capT}</td>
+      <td style="text-align:center">${wc}</td>
+      <td>${lug}</td>
+      <td class="pr" style="text-align:right">NT$${d.price}</td>
+      <td>${map}</td>
+      <td><a class="off" target="_blank" href="${d.off}">官方↗</a></td>
+    </tr>`;
+  }).join("");
+  cnt.innerHTML=`顯示 <b>${rows.length}</b> / 60 間`+(rows.length===0?"（無符合條件，請放寬篩選）":"");
+}
+
+document.querySelectorAll('th[data-k]').forEach(th=>{
+  th.addEventListener('click',()=>{
+    const k=th.dataset.k;
+    if(sortKey===k){sortDir*=-1;}else{sortKey=k;sortDir=1;}
+    document.querySelectorAll('th .ar').forEach(a=>a.textContent="↕");
+    th.querySelector('.ar').textContent=sortDir>0?"▲":"▼";
+    render();
+  });
+});
+[q,fcat,fa,fcap,fprice,fwc,flug].forEach(el=>el.addEventListener('input',render));
+document.getElementById('reset').addEventListener('click',()=>{
+  q.value="";fcat.value="";fa.value="";fcap.value="7";fprice.value="";fwc.checked=false;flug.value="";
+  sortKey="id";sortDir=1;document.querySelectorAll('th .ar').forEach(a=>a.textContent="↕");render();
+});
+render();
+</script>
+</body>
+</html>
