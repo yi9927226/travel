@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡住宿候選（真獨棟・每人≤NT$3000/晚）｜7人・2026/11/1–11/6</title>
+<style>
+  :root{
+    --bg:#f4f6f2; --card:#fff; --ink:#222; --sub:#666; --line:#e3e6dd;
+    --warn:#b8860b; --gold:#bfa14a; --pass:#2c7a4b; --partial:#b8860b; --fail:#b03030;
+    --villa:#2f6f5e; --onsen:#1f6f8b; --room:#6a4c93;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;padding:0 0 60px}
+  header{background:linear-gradient(135deg,#2f6f5e,#22413a);color:#fff;padding:34px 22px 30px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+  header h1{font-size:1.45rem;letter-spacing:.5px}
+  header p{color:#dceee7;margin-top:8px;font-size:.95rem}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:20px;font-size:.82rem}
+  .chip.new{background:#ffd86b;color:#3a2e00;border-color:#e9c34a;font-weight:700}
+  h2{font-size:1.2rem;margin:34px 0 6px;padding-left:11px;border-left:4px solid var(--villa)}
+  .lead{color:var(--sub);font-size:.92rem;margin-bottom:14px}
+  .rec{background:#eef6f2;border:1px solid #cfe4da;border-radius:12px;padding:16px 18px;margin:14px 0 4px;display:flex;gap:14px;align-items:flex-start}
+  .rec b{color:var(--villa)}
+  .budget{background:#fff8e8;border:1px solid #ecd9a6;border-radius:12px;padding:14px 18px;margin:14px 0;font-size:.9rem}
+  .budget b{color:#8a6d1f}
+  .budget table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.85rem}
+  .budget td{padding:5px 8px;border-bottom:1px solid #ecd9a6}
+  .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .card-top{padding:18px 20px 6px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .rank{display:inline-block;background:var(--gold);color:#fff;font-weight:700;font-size:.78rem;padding:3px 11px;border-radius:20px;margin-bottom:8px}
+  .rank.r1{background:var(--villa)}
+  .card h3{font-size:1.18rem}
+  .card .tag{color:var(--sub);font-size:.86rem;margin-top:3px}
+  .price{text-align:right;min-width:160px}
+  .price .num{font-size:1.02rem;font-weight:700;color:var(--ink)}
+  .price small{color:var(--sub);font-size:.74rem;display:block}
+  .body{padding:4px 20px 18px}
+  .row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  .pill{font-size:.78rem;padding:3px 10px;border-radius:8px;border:1px solid var(--line);background:#f7f9f4}
+  table.crit{width:100%;border-collapse:collapse;margin-top:8px;font-size:.85rem}
+  table.crit td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.crit td:first-child{color:var(--sub);width:130px}
+  .b{font-weight:700;font-size:.72rem;padding:2px 8px;border-radius:6px;color:#fff;white-space:nowrap}
+  .b.pass{background:var(--pass)} .b.partial{background:var(--partial)} .b.fail{background:var(--fail)}
+  .roombox{background:#f3f0fa;border:1px solid #ddd1f0;border-radius:10px;padding:11px 14px;margin-top:12px}
+  .roombox h5{color:var(--room);font-size:.9rem;margin-bottom:5px}
+  .roombox .r{font-size:.83rem;padding:2px 0}
+  .bed{display:inline-block;background:var(--room);color:#fff;font-size:.7rem;padding:1px 7px;border-radius:5px;margin-right:6px}
+  .bathbox{background:#eef7fa;border:1px solid #cfe6ee;border-radius:10px;padding:11px 14px;margin-top:10px}
+  .bathbox h5{color:var(--onsen);font-size:.9rem;margin-bottom:5px}
+  .bathbox .o{font-size:.83rem;padding:2px 0}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .links a{font-size:.82rem;text-decoration:none;color:#fff;background:var(--ink);padding:7px 13px;border-radius:8px}
+  .links a.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .note{font-size:.82rem;color:var(--warn);margin-top:10px;background:#fdf6e3;border:1px solid #efe4c2;padding:9px 12px;border-radius:8px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:8px}
+  table.cmp{width:100%;border-collapse:collapse;font-size:.84rem;min-width:720px;background:#fff}
+  table.cmp th,table.cmp td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+  table.cmp th{background:#e2efe9}
+  table.cmp tr td:first-child{font-weight:600;color:var(--sub)}
+  .over{background:#fbeeee;border:1px solid #e6c3c3;border-radius:12px;padding:14px 18px;margin-top:10px;font-size:.88rem}
+  .over h4{color:var(--fail);font-size:.95rem;margin-bottom:6px}
+  .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:8px}
+  .platforms a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;text-decoration:none;color:var(--ink);font-size:.86rem}
+  .platforms a span{display:block;color:var(--sub);font-size:.76rem;margin-top:2px}
+  .footer{font-size:.82rem;color:var(--sub);margin-top:30px;border-top:1px solid var(--line);padding-top:16px}
+  .footer a{color:var(--villa)}
+  .verify{background:#fff;border:1px dashed var(--warn);border-radius:12px;padding:16px 18px;margin-top:10px}
+  .verify h4{color:var(--warn);font-size:.95rem;margin-bottom:6px}
+  .verify ul{margin-left:18px;font-size:.86rem;color:#555}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>福岡住宿候選 🏡 真・獨棟透天／別墅（每人每晚 ≤ NT$3,000）</h1>
+    <p>入住 2026/11/1（六）－ 2026/11/6（四），共 5 晚｜7 人</p>
+    <div class="meta">
+      <span class="chip">👥 7 人</span>
+      <span class="chip">🏡 真・獨棟一軒家／Villa</span>
+      <span class="chip new">💰 每人每晚 ≤ NT$3,000（總額 ≤ ¥98,700/晚）</span>
+      <span class="chip">🛏 2–3 房</span>
+      <span class="chip">🚇 近地鐵</span>
+      <span class="chip">♨ 可泡湯</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="budget">
+    <b>💰 預算換算（NT$1 ≒ ¥4.7）：</b>每人每晚 NT$3,000 ≒ ¥14,100；7 人 = <b>每晚總額上限 ≒ ¥98,700（約 NT$21,000）</b>。以此檢核：
+    <table>
+      <tr><td>① 千代県庁口 一戸建て</td><td>估 ¥40,000–70,000/晚 → 每人 ≒ NT$1,200–2,130</td><td><span class="b pass">PASS</span></td></tr>
+      <tr><td>② 糸島 海景桑拿 Villa</td><td>¥58,000~/晚 → 每人 ≒ NT$1,760</td><td><span class="b pass">PASS</span></td></tr>
+      <tr><td>✗ 博多水庭（上次 ①）</td><td>¥122,400~/晚，即使 5 晚 –15% 仍 ≒ 每人 NT$3,160</td><td><span class="b fail">超標</span></td></tr>
+    </table>
+  </div>
+
+  <div class="rec">
+    <div style="font-size:1.6rem">🏡</div>
+    <div>
+      <b>結論先行（誠實提醒）：</b>同時滿足「<b>真・獨棟透天 ＋ 市區近地鐵 ＋ 每人≤NT$3,000</b>」的物件在福岡<b>很稀少</b>——市中心的平價一棟貸幾乎都是<b>町家連棟</b>（你已排除），真正的獨棟別墅又多在郊區。在預算內，最佳市區解是 <b>① 千代県庁口 一戸建て</b>（真透天、3 房、地鐵 5 分）；若願意<b>租車換海景＋私人桑拿</b>，<b>② 糸島 Villa</b> 也在預算內。上次的博多水庭已超標，移到下方備註。
+    </div>
+  </div>
+
+  <h2>預算內・真獨棟候選</h2>
+  <p class="lead">價格／空房均需即時查證（11/1–11/6、7 人）。</p>
+
+  <div class="grid">
+
+    <!-- ① 千代県庁口 一戸建て -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank r1">① 最推薦・市區真透天＋3 房</span>
+          <h3>博多 1 站・千代県庁口 一戸建て丸ごと貸切</h3>
+          <div class="tag">福岡市・地鐵千代県庁口駅 徒步 5 分（博多駅 1 站）</div>
+        </div>
+        <div class="price">
+          <div class="num">估 ¥40,000–70,000／晚</div>
+          <small>整棟・需查證</small>
+          <small>每人 ≒ NT$1,200–2,130／晚</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">★ 真・2 層透天一戸建て</span>
+          <span class="pill">最大 10 名</span>
+          <span class="pill">★ 3 間獨立臥室</span>
+          <span class="pill">50 吋電視＋Netflix</span>
+        </div>
+        <div class="roombox">
+          <h5>🛏 臥室隔間（3 間・最適合打呼分房）</h5>
+          <div class="r"><span class="bed">房 A</span>約 3 人　<span class="bed">房 B</span>約 3 人　<span class="bed">房 C</span>約 3 人</div>
+          <div class="r" style="color:#6a4c93;margin-top:3px">＋ 1F 沙發床 → 7 人可<b>一人一房或彈性分配，打呼者獨享一間</b></div>
+        </div>
+        <table class="crit">
+          <tr><td>真獨棟</td><td><span class="b pass">PASS</span> 2 層一戸建て整棟（非町家連棟）</td></tr>
+          <tr><td>每人≤NT$3,000</td><td><span class="b pass">PASS</span> 估每人 NT$1,200–2,130</td></tr>
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 上限 10 名</td></tr>
+          <tr><td>🛏 2–3 房</td><td><span class="b pass">PASS</span> 3 間獨立臥室</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> 千代県庁口駅 5 分</td></tr>
+          <tr><td>♨ 泡湯</td><td><span class="b partial">PARTIAL</span> 無房內溫泉；可往博多側錢湯</td></tr>
+          <tr><td>2 廁所／洗衣機</td><td><span class="b partial">PARTIAL</span> 需查證</td></tr>
+        </table>
+        <div class="links">
+          <a href="https://www.expedia.co.jp/Fukuoka-Hotels-1-Station-From-Hakata-Station-Entire-Homes-Can-Be-Fukuoka-Fukuoka.h57376030.Hotel-Information" target="_blank">Expedia 物件頁</a>
+          <a class="alt" href="https://www.vrbo.com/ja-jp/宿泊/一軒家/日本/福岡県/福岡市" target="_blank">Vrbo 同類整棟</a>
+        </div>
+        <div class="note">⚠ 查證：① 11/1–11/6 空房與整棟總價（確認落在 ¥98,700 內）；② 廁所數、洗衣機；③ 千代県庁口在箱崎線，往機場需轉乘。</div>
+      </div>
+    </div>
+
+    <!-- ② 糸島 海景桑拿 Villa -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank">② 預算內度假・海景私人桑拿</span>
+          <h3>糸島 貸切三溫暖 Villa（海景・1 日 1 組）</h3>
+          <div class="tag">福岡県糸島市｜福岡市區／福岡塔 車程約 40 分（無鄰近地鐵）</div>
+        </div>
+        <div class="price">
+          <div class="num">¥58,000～／晚（含 –10%）</div>
+          <small>整棟・依人數/日期</small>
+          <small>每人 ≒ NT$1,760／晚</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">★ 真獨棟海景 Villa</span>
+          <span class="pill">100℃ 方型桑拿＋水風呂</span>
+          <span class="pill">露台直達沙灘</span>
+          <span class="pill">Japandi 風</span>
+        </div>
+        <div class="roombox">
+          <h5>🛏 臥室隔間（2 間・2F）</h5>
+          <div class="r"><span class="bed">2F 寢室 ×2</span>打呼者可獨享一間；7 人床位配置需向業者確認。</div>
+        </div>
+        <table class="crit">
+          <tr><td>真獨棟</td><td><span class="b pass">PASS</span> 1 日 1 組海景私人 Villa</td></tr>
+          <tr><td>每人≤NT$3,000</td><td><span class="b pass">PASS</span> 每人 ≒ NT$1,760（基本價）</td></tr>
+          <tr><td>7 人容納</td><td><span class="b partial">PARTIAL</span> 需確認可容 7 人</td></tr>
+          <tr><td>🛏 2–3 房</td><td><span class="b partial">PARTIAL</span> 2 間</td></tr>
+          <tr><td>近地鐵</td><td><span class="b fail">FAIL</span> 糸島郊區，車程約 40 分，需租車</td></tr>
+          <tr><td>♨ 泡湯</td><td><span class="b pass">PASS</span> 房內桑拿＋水風呂＋海濱</td></tr>
+        </table>
+        <div class="links">
+          <a href="https://www.itoshima-sauna-privatevilla.com/" target="_blank">官方網站</a>
+          <a class="alt" href="https://code-rooms.com/" target="_blank">CODE ROOMS 糸島（同類）</a>
+          <a class="alt" href="https://kubikai.com/" target="_blank">空火海（奧糸島同類）</a>
+        </div>
+        <div class="note">⚠ 取捨：海景＋私人桑拿極致鬆弛、且在預算內，但<b>違反「近地鐵」</b>，需自駕約 40 分往返市區美食。若本團願租車，這是預算內最「重開機」的真獨棟。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="over">
+    <h4>＊備註：博多水庭（上次第①）已超出本次預算</h4>
+    私人泳池＋三溫暖 Villa「博多水庭」雖最符合「真獨棟＋房內泡湯＋近站」，但房價 ¥122,400~/晚，<b>每人約 NT$3,720</b>；即使 5 晚以上 –15% 折扣後仍約 <b>每人 NT$3,160</b>，<b>略超 NT$3,000 上限約 5%</b>。若你願小幅破例、或縮短入住天數，仍可考慮；否則維持排除。連結：<a href="https://advance-resort.com/hakatasuitei" target="_blank" style="color:#b03030">博多水庭官方</a>。
+  </div>
+
+  <h2>一覽比較表</h2>
+  <div class="scroll">
+    <table class="cmp">
+      <tr><th>項目</th><th>① 千代県庁口 一戸建て</th><th>② 糸島 桑拿 Villa</th></tr>
+      <tr><td>真獨棟</td><td>★ 2 層透天</td><td>★ 海景 Villa</td></tr>
+      <tr><td>每人/晚</td><td>NT$1,200–2,130</td><td>≒ NT$1,760</td></tr>
+      <tr><td>獨立臥室</td><td><b>3 間</b></td><td>2 間</td></tr>
+      <tr><td>近地鐵</td><td>千代県庁口 5 分 ✓</td><td>✗ 車程 40 分</td></tr>
+      <tr><td>房內泡湯</td><td>無（往錢湯）</td><td>★ 桑拿＋水風呂＋海濱</td></tr>
+      <tr><td>容納（7人）</td><td>10 名 ✓</td><td>需查證</td></tr>
+      <tr><td>定位</td><td>市區・實惠・分房</td><td>海景・度假・需開車</td></tr>
+    </table>
+  </div>
+
+  <h2>想再多看預算內真獨棟？平台直連（記得設定 ≤¥98,700/晚）</h2>
+  <div class="platforms">
+    <a href="https://www.vrbo.com/ja-jp/宿泊/一軒家/日本/福岡県/福岡市" target="_blank">Vrbo 福岡一軒家<span>約 68 件整棟・可篩價</span></a>
+    <a href="https://stayjapan.com/area/fukuoka" target="_blank">STAY JAPAN<span>民泊・古民家・貸別荘</span></a>
+    <a href="https://travel.yahoo.co.jp/kyushu/350901/?accommodation_types=VACATION_RENTAL" target="_blank">Yahoo! 旅遊 貸別荘<span>可篩設備/價格</span></a>
+    <a href="https://www.expedia.co.jp/Fukuoka-Private-Vacation-Homes.d6336957-aaPrivateVacationHomes.Travel-Guide-Accommodation" target="_blank">Expedia 一棟貸<span>可篩價格/人數</span></a>
+  </div>
+
+  <div class="verify">
+    <h4>📌 訂房前必查（資訊會變動）</h4>
+    <ul>
+      <li><b>① 千代戸建</b>：以 11/1、5 晚、7 人查整棟總價，確認 ≤ ¥98,700/晚；廁所數、洗衣機。</li>
+      <li><b>② 糸島</b>：確認 7 人容納、含稅總價、租車與停車安排。</li>
+      <li><b>中心區若可接受町家連棟</b>：MUSUBI HOTEL 町家、博多町家ホテル Kamigofuku 等一棟貸更便宜（每人約 NT$1,000 起），但屬<b>町家型非純透天</b>，視你是否放寬。</li>
+      <li><b>刺青規定</b>：②為私人桑拿無公共澡堂限制；外出公共錢湯才需查。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>資料來源：
+      <a href="https://www.expedia.co.jp/Fukuoka-Hotels-1-Station-From-Hakata-Station-Entire-Homes-Can-Be-Fukuoka-Fukuoka.h57376030.Hotel-Information" target="_blank">Expedia 千代戸建</a>、
+      <a href="https://www.itoshima-sauna-privatevilla.com/" target="_blank">糸島桑拿 Villa 官方</a>、
+      <a href="https://www.jalan.net/keyword/key0017982/400000/" target="_blank">じゃらん 一棟貸し清單</a>、
+      <a href="https://advance-resort.com/hakatasuitei" target="_blank">博多水庭官方</a>、
+      <a href="https://www.vrbo.com/ja-jp/宿泊/一軒家/日本/福岡県/福岡市" target="_blank">Vrbo</a>。
+    </p>
+    <p style="margin-top:8px">製作：旅遊規劃顧問｜彙整日 2026-06-19｜NT$1≒¥4.7 估算。房價／空房／配置以各連結即時頁面與業者回覆為準。</p>
+  </div>
+
+</div>
+</body>
+</html>

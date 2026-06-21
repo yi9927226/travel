@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡住宿候選（同棟亦可・每人≤NT$3000）｜7人・2026/11/1–11/6</title>
+<style>
+  :root{
+    --bg:#f5f1fb; --card:#fff; --ink:#222; --sub:#666; --line:#e3ddee;
+    --warn:#b8860b; --gold:#bfa14a; --pass:#2c7a4b; --partial:#b8860b; --fail:#b03030;
+    --room:#6a4c93; --onsen:#1f6f8b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;padding:0 0 60px}
+  header{background:linear-gradient(135deg,#6a4c93,#3a2b52);color:#fff;padding:34px 22px 30px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+  header h1{font-size:1.45rem;letter-spacing:.5px}
+  header p{color:#e4ddf0;margin-top:8px;font-size:.95rem}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:5px 12px;border-radius:20px;font-size:.82rem}
+  .chip.new{background:#ffd86b;color:#3a2e00;border-color:#e9c34a;font-weight:700}
+  h2{font-size:1.2rem;margin:34px 0 6px;padding-left:11px;border-left:4px solid var(--room)}
+  .lead{color:var(--sub);font-size:.92rem;margin-bottom:14px}
+  .rec{background:#fff;border:1px solid #ddd1f0;border-radius:12px;padding:16px 18px;margin:14px 0 4px;display:flex;gap:14px;align-items:flex-start}
+  .rec b{color:var(--room)}
+  .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .card-top{padding:18px 20px 6px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .rank{display:inline-block;background:var(--gold);color:#fff;font-weight:700;font-size:.78rem;padding:3px 11px;border-radius:20px;margin-bottom:8px}
+  .rank.r1{background:var(--room)}
+  .card h3{font-size:1.18rem}
+  .card .tag{color:var(--sub);font-size:.86rem;margin-top:3px}
+  .price{text-align:right;min-width:160px}
+  .price .num{font-size:1.02rem;font-weight:700;color:var(--ink)}
+  .price small{color:var(--sub);font-size:.74rem;display:block}
+  .body{padding:4px 20px 18px}
+  .row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  .pill{font-size:.78rem;padding:3px 10px;border-radius:8px;border:1px solid var(--line);background:#faf8fd}
+  table.crit{width:100%;border-collapse:collapse;margin-top:8px;font-size:.85rem}
+  table.crit td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.crit td:first-child{color:var(--sub);width:130px}
+  .b{font-weight:700;font-size:.72rem;padding:2px 8px;border-radius:6px;color:#fff;white-space:nowrap}
+  .b.pass{background:var(--pass)} .b.partial{background:var(--partial)} .b.fail{background:var(--fail)}
+  .roombox{background:#f3f0fa;border:1px solid #ddd1f0;border-radius:10px;padding:11px 14px;margin-top:12px}
+  .roombox h5{color:var(--room);font-size:.9rem;margin-bottom:5px}
+  .roombox .r{font-size:.83rem;padding:2px 0}
+  .bed{display:inline-block;background:var(--room);color:#fff;font-size:.7rem;padding:1px 7px;border-radius:5px;margin-right:6px}
+  .bathbox{background:#eef7fa;border:1px solid #cfe6ee;border-radius:10px;padding:11px 14px;margin-top:10px}
+  .bathbox h5{color:var(--onsen);font-size:.9rem;margin-bottom:5px}
+  .bathbox .o{font-size:.83rem;padding:2px 0}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .links a{font-size:.82rem;text-decoration:none;color:#fff;background:var(--ink);padding:7px 13px;border-radius:8px}
+  .links a.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .note{font-size:.82rem;color:var(--warn);margin-top:10px;background:#fdf6e3;border:1px solid #efe4c2;padding:9px 12px;border-radius:8px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:8px}
+  table.cmp{width:100%;border-collapse:collapse;font-size:.84rem;min-width:760px;background:#fff}
+  table.cmp th,table.cmp td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+  table.cmp th{background:#ece5f5}
+  table.cmp tr td:first-child{font-weight:600;color:var(--sub)}
+  .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:8px}
+  .platforms a{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px 13px;text-decoration:none;color:var(--ink);font-size:.86rem}
+  .platforms a span{display:block;color:var(--sub);font-size:.76rem;margin-top:2px}
+  .footer{font-size:.82rem;color:var(--sub);margin-top:30px;border-top:1px solid var(--line);padding-top:16px}
+  .footer a{color:var(--room)}
+  .verify{background:#fff;border:1px dashed var(--warn);border-radius:12px;padding:16px 18px;margin-top:10px}
+  .verify h4{color:var(--warn);font-size:.95rem;margin-bottom:6px}
+  .verify ul{margin-left:18px;font-size:.86rem;color:#555}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>福岡住宿候選 🏠 同一棟單元亦可・每人每晚 ≤ NT$3,000</h1>
+    <p>入住 2026/11/1（六）－ 2026/11/6（四），共 5 晚｜7 人</p>
+    <div class="meta">
+      <span class="chip">👥 7 人</span>
+      <span class="chip new">🏠 放寬：同棟單元 OK（不限真獨棟）</span>
+      <span class="chip">🛏 2–3 房分睡</span>
+      <span class="chip">🚻 ≥ 2 廁所</span>
+      <span class="chip">🚇 近地鐵</span>
+      <span class="chip">🧺 洗衣機</span>
+      <span class="chip">♨ 步行湯屋</span>
+      <span class="chip">💰 每人 ≤ NT$3,000</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="rec">
+    <div style="font-size:1.6rem">🎯</div>
+    <div>
+      <b>結論先行：</b>放寬「真獨棟」後，<b>之前因此被刷掉的最佳解回鍋了</b>——
+      <b>① 福岡 Condominium 5-G</b> 幾乎全條件命中：<b>3 間獨立臥室</b>（打呼分房）、步行 5 分到天然溫泉八百治の湯、全室廚房、近博多駅，且<b>每人每晚僅約 NT$833</b>，遠在預算內。
+      想多一點選擇，同棟還有 <b>7-F（2 房）</b>；不同業者、不同區可看 <b>③ Rakuten STAY 博多祇園</b>（呉服町站旁，但開放式不利打呼）。
+    </div>
+  </div>
+
+  <h2>推薦候選（同棟單元亦可）</h2>
+  <p class="lead">三案每人每晚皆 ≤ NT$3,000。價格／空房需即時查證（11/1–11/6、7 人）。</p>
+
+  <div class="grid">
+
+    <!-- ① 福岡 Condominium 5-G -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank r1">① 最推薦・回鍋最佳解</span>
+          <h3>福岡 Condominium ── 5-G 房型（3 臥室）</h3>
+          <div class="tag">福岡市博多区博多駅前／東｜JR・地鐵博多駅 徒步約 10 分</div>
+        </div>
+        <div class="price">
+          <div class="num">7 人約 ¥27,400／晚</div>
+          <small>(房¥8,000＋加人¥3,000×6＋宿泊税)・清掃¥6,000/次</small>
+          <small>每人 ≒ NT$833／晚</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">★ 3 間獨立臥室</span>
+          <span class="pill">最大 10 名</span>
+          <span class="pill">全室廚房・可自炊</span>
+          <span class="pill">附盥洗用品＋毛巾</span>
+        </div>
+        <div class="roombox">
+          <h5>🛏 臥室隔間（官方明列・打呼分房最佳）</h5>
+          <div class="r"><span class="bed">臥室 1</span>雙人床 ×2　<span class="bed">臥室 2</span>雙人＋單人　<span class="bed">臥室 3</span>雙人＋單人</div>
+          <div class="r" style="color:#6a4c93;margin-top:3px">→ 7 人彈性分配，<b>打呼同伴可獨享一間</b></div>
+        </div>
+        <div class="bathbox">
+          <h5>♨ 最近湯屋</h5>
+          <div class="o"><span style="color:var(--onsen);font-weight:700">博多駅 5 分</span>　八百治の湯（天然溫泉，男女分湯，免費毛巾）</div>
+          <div class="o"><span style="color:var(--onsen);font-weight:700">徒步 12 分</span>　鶴亀湯（百年老錢湯 ¥550，週日休）</div>
+        </div>
+        <table class="crit">
+          <tr><td>同棟單元 OK</td><td><span class="b pass">PASS</span> 公寓整戶包租</td></tr>
+          <tr><td>每人≤NT$3,000</td><td><span class="b pass">PASS</span> 每人 ≒ NT$833（最省）</td></tr>
+          <tr><td>🛏 2–3 房</td><td><span class="b pass">PASS</span> 3 間獨立臥室</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> 博多駅徒步約 10 分</td></tr>
+          <tr><td>♨ 泡湯</td><td><span class="b pass">PASS</span> 八百治の湯 5 分</td></tr>
+          <tr><td>洗衣機／2 廁所</td><td><span class="b partial">PARTIAL</span> 業者標榜洗衣機，仍須確認該戶＋衛浴數</td></tr>
+        </table>
+        <div class="links">
+          <a href="https://fukuoka-hotel.jp/about/guestroom/5-g/" target="_blank">5-G 房型官方</a>
+          <a class="alt" href="https://fukuoka-hotel.jp/reservation/" target="_blank">線上預約</a>
+          <a class="alt" href="https://www.yaoji.co.jp/spa/" target="_blank">八百治の湯</a>
+        </div>
+        <div class="note">⚠ 查證：① 該戶洗衣機與廁所數（電話 092-432-7470）；② 11/1–11/6 空房與含稅總價。</div>
+      </div>
+    </div>
+
+    <!-- ② 福岡 Condominium 7-F -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank">② 同棟備選・2 房和式</span>
+          <h3>福岡 Condominium ── 7-F 房型（2 臥室＋畳客廳）</h3>
+          <div class="tag">同上・博多駅前｜最大 9 名</div>
+        </div>
+        <div class="price">
+          <div class="num">7 人約 ¥27,400／晚</div>
+          <small>計價同 5-G</small>
+          <small>每人 ≒ NT$833／晚</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">2 間臥室＋畳客廳</span>
+          <span class="pill">最大 9 名</span>
+          <span class="pill">全室廚房</span>
+        </div>
+        <div class="roombox">
+          <h5>🛏 臥室隔間</h5>
+          <div class="r"><span class="bed">臥室 1</span>雙人＋單人　<span class="bed">臥室 2</span>單人×2＋被　<span class="bed">客廳</span>沙發床＋被</div>
+          <div class="r" style="color:#6a4c93;margin-top:3px">→ 2 間獨立房，打呼者可睡其一；若想 3 房請選 5-G</div>
+        </div>
+        <table class="crit">
+          <tr><td>同棟單元 OK</td><td><span class="b pass">PASS</span></td></tr>
+          <tr><td>每人≤NT$3,000</td><td><span class="b pass">PASS</span> ≒ NT$833</td></tr>
+          <tr><td>🛏 2–3 房</td><td><span class="b pass">PASS</span> 2 間（達標）</td></tr>
+          <tr><td>近地鐵／泡湯</td><td><span class="b pass">PASS</span> 同 5-G（博多駅、八百治の湯）</td></tr>
+          <tr><td>洗衣機／2 廁所</td><td><span class="b partial">PARTIAL</span> 查證</td></tr>
+        </table>
+        <div class="links">
+          <a href="https://fukuoka-hotel.jp/about/guestroom/7-f/" target="_blank">7-F 房型官方</a>
+          <a class="alt" href="https://fukuoka-hotel.jp/about/guestroom/" target="_blank">全房型一覽</a>
+        </div>
+        <div class="note">⚠ 5-G 與 7-F 為同一營運商不同房；若 5-G 滿房可訂此，或同訂兩房分流。</div>
+      </div>
+    </div>
+
+    <!-- ③ Rakuten STAY -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank">③ 不同業者・設施新</span>
+          <h3>Rakuten STAY 博多祇園 ── Deluxe 型</h3>
+          <div class="tag">福岡市博多区｜地鐵呉服町駅 徒步約 4–5 分</div>
+        </div>
+        <div class="price">
+          <div class="num">約 ¥28,000–55,000／晚</div>
+          <small>8 人房・需查證</small>
+          <small>每人 ≒ NT$850–1,670／晚</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">Deluxe 53㎡・最大 8 名</span>
+          <span class="pill">獨立浴室＋廁所</span>
+          <span class="pill">洗衣（乾衣）機</span>
+          <span class="pill">樂天連鎖</span>
+        </div>
+        <div class="roombox">
+          <h5>🛏 臥室隔間</h5>
+          <div class="r"><span class="bed" style="background:var(--fail)">弱點</span>開放式大空間，無實牆獨立臥室 → 對打呼較不利</div>
+        </div>
+        <table class="crit">
+          <tr><td>同棟單元 OK</td><td><span class="b pass">PASS</span> 大型單元</td></tr>
+          <tr><td>每人≤NT$3,000</td><td><span class="b pass">PASS</span> ≒ NT$850–1,670</td></tr>
+          <tr><td>🛏 2–3 房</td><td><span class="b fail">FAIL</span> 開放式無隔間</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> 呉服町駅 4–5 分</td></tr>
+          <tr><td>♨ 泡湯</td><td><span class="b partial">PARTIAL</span> 房內獨立浴室；外湯較遠</td></tr>
+          <tr><td>洗衣機</td><td><span class="b pass">PASS</span> 官方明列</td></tr>
+        </table>
+        <div class="links">
+          <a href="https://stay.rakuten.co.jp/hakata-gion/" target="_blank">官方網站</a>
+          <a class="alt" href="https://travel.rakuten.co.jp/HOTEL/170210/170210.html" target="_blank">樂天訂房</a>
+        </div>
+        <div class="note">⚠ 設施新、訂房透明，但隔間不利打呼。若想要新穎設施且可接受同空間就寢再選。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>一覽比較表</h2>
+  <div class="scroll">
+    <table class="cmp">
+      <tr><th>項目</th><th>① Condo 5-G</th><th>② Condo 7-F</th><th>③ Rakuten STAY</th></tr>
+      <tr><td>獨立臥室</td><td><b>3 間</b></td><td>2 間</td><td>0（開放式）</td></tr>
+      <tr><td>打呼分房</td><td>★ 可獨享 1 房</td><td>可</td><td>✗ 不利</td></tr>
+      <tr><td>每人/晚</td><td>★ ≒ NT$833</td><td>≒ NT$833</td><td>NT$850–1,670</td></tr>
+      <tr><td>近地鐵</td><td>博多駅 10 分</td><td>博多駅 10 分</td><td>呉服町 4–5 分</td></tr>
+      <tr><td>步行泡湯</td><td>八百治の湯 5 分</td><td>八百治の湯 5 分</td><td>房內浴室（外湯遠）</td></tr>
+      <tr><td>可自炊</td><td>★ 全室廚房</td><td>★ 全室廚房</td><td>部分</td></tr>
+      <tr><td>容納（7人）</td><td>10 名 ✓</td><td>9 名 ✓</td><td>8 名 ✓</td></tr>
+    </table>
+  </div>
+
+  <h2>想換到天神側？同類可查（多房・廚房・洗衣機）</h2>
+  <div class="platforms">
+    <a href="https://roomsfukuoka.com/" target="_blank">ROOMS 福岡<span>天神南駅 徒步 3 分・公寓式</span></a>
+    <a href="https://www.expedia.co.jp/Fukuoka-Hotels-Apartment-Hotel-Tenjin-Tumugu.h35795562.Hotel-Information" target="_blank">アパートメントホテル天神 Tumugu<span>天神・公寓式</span></a>
+    <a href="https://travel.kakaku.com/国内宿泊予約/福岡県-天神ホテル-dir03-prf40-00010/?hoteltype=アパートメント" target="_blank">價格.com 天神公寓式<span>多家比價</span></a>
+  </div>
+
+  <div class="verify">
+    <h4>📌 訂房前必查（資訊會變動）</h4>
+    <ul>
+      <li><b>福岡 Condominium</b>：5-G／7-F 指定戶的洗衣機與廁所數（電話 092-432-7470）；11/1–11/6 空房與含稅總價。</li>
+      <li><b>八百治の湯</b>：確認非住客日歸入浴價與時段。</li>
+      <li><b>鶴亀湯週日休</b>：11/2 不營業、15:00 才開，泡湯排其他天。</li>
+      <li><b>Rakuten STAY</b>：是否接受同空間就寢（打呼）；廁所是否 2 間。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>資料來源：
+      <a href="https://fukuoka-hotel.jp/about/guestroom/5-g/" target="_blank">福岡 Condominium 5-G</a>、
+      <a href="https://fukuoka-hotel.jp/about/guestroom/7-f/" target="_blank">7-F</a>、
+      <a href="https://stay.rakuten.co.jp/hakata-gion/" target="_blank">Rakuten STAY 博多祇園</a>、
+      <a href="https://www.yaoji.co.jp/spa/" target="_blank">八百治の湯</a>、
+      <a href="https://fukuoka1010.com/fukuoka/tsurukameyu/" target="_blank">鶴亀湯</a>。
+    </p>
+    <p style="margin-top:8px">製作：旅遊規劃顧問｜彙整日 2026-06-19｜NT$1≒¥4.7 估算。房價／空房／配置以各連結即時頁面與業者回覆為準。</p>
+  </div>
+
+</div>
+</body>
+</html>

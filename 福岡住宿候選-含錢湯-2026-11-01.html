@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡住宿候選（含錢湯條件）｜7人・2026/11/1–11/6</title>
+<style>
+  :root{
+    --bg:#f6f4ef; --card:#fff; --ink:#222; --sub:#666; --line:#e6e1d8;
+    --accent:#c0392b; --accent2:#2c7a4b; --warn:#b8860b; --gold:#bfa14a;
+    --pass:#2c7a4b; --partial:#b8860b; --fail:#b03030; --onsen:#1f6f8b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.7;padding:0 0 60px}
+  header{background:linear-gradient(135deg,#1f6f8b,#2b4a52);color:#fff;padding:34px 22px 30px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+  header h1{font-size:1.55rem;letter-spacing:.5px}
+  header p{color:#dbeaf0;margin-top:8px;font-size:.95rem}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+    padding:5px 12px;border-radius:20px;font-size:.82rem}
+  .chip.new{background:#ffd86b;color:#3a2e00;border-color:#e9c34a;font-weight:700}
+  h2{font-size:1.2rem;margin:34px 0 6px;padding-left:11px;border-left:4px solid var(--onsen)}
+  .lead{color:var(--sub);font-size:.92rem;margin-bottom:14px}
+  .rec{background:#f2fafc;border:1px solid #cfe6ee;border-radius:12px;padding:16px 18px;margin:14px 0 4px;
+    display:flex;gap:14px;align-items:flex-start}
+  .rec b{color:var(--onsen)}
+  .alertbox{background:#fdecea;border:1px solid #f3c0bb;border-radius:10px;padding:12px 15px;margin:12px 0;
+    font-size:.88rem;color:#8a2b22}
+  .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .card-top{padding:18px 20px 6px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .rank{display:inline-block;background:var(--gold);color:#fff;font-weight:700;font-size:.78rem;
+    padding:3px 11px;border-radius:20px;margin-bottom:8px}
+  .rank.r1{background:var(--onsen)}
+  .card h3{font-size:1.18rem}
+  .card .tag{color:var(--sub);font-size:.86rem;margin-top:3px}
+  .price{text-align:right;min-width:150px}
+  .price .num{font-size:1.05rem;font-weight:700;color:var(--ink)}
+  .price small{color:var(--sub);font-size:.74rem;display:block}
+  .body{padding:4px 20px 18px}
+  .row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+  .pill{font-size:.78rem;padding:3px 10px;border-radius:8px;border:1px solid var(--line);background:#faf8f3}
+  table.crit{width:100%;border-collapse:collapse;margin-top:8px;font-size:.85rem}
+  table.crit td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.crit td:first-child{color:var(--sub);width:130px}
+  .b{font-weight:700;font-size:.72rem;padding:2px 8px;border-radius:6px;color:#fff;white-space:nowrap}
+  .b.pass{background:var(--pass)} .b.partial{background:var(--partial)} .b.fail{background:var(--fail)}
+  /* onsen block */
+  .onsenbox{background:#f2fafc;border:1px solid #cfe6ee;border-radius:10px;padding:12px 14px;margin-top:12px}
+  .onsenbox h5{color:var(--onsen);font-size:.92rem;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+  .onsenbox .o{font-size:.84rem;padding:5px 0;border-bottom:1px dashed #cfe6ee}
+  .onsenbox .o:last-child{border-bottom:none}
+  .onsenbox .o b{color:var(--ink)}
+  .dist{display:inline-block;background:var(--onsen);color:#fff;font-size:.7rem;padding:1px 7px;border-radius:5px;margin-right:6px}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .links a{font-size:.82rem;text-decoration:none;color:#fff;background:var(--ink);
+    padding:7px 13px;border-radius:8px}
+  .links a.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .note{font-size:.82rem;color:var(--warn);margin-top:10px;background:#fdf6e3;border:1px solid #efe4c2;
+    padding:9px 12px;border-radius:8px}
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:8px}
+  table.cmp{width:100%;border-collapse:collapse;font-size:.84rem;min-width:760px;background:#fff}
+  table.cmp th,table.cmp td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+  table.cmp th{background:#e4f1f5}
+  table.cmp tr td:first-child{font-weight:600;color:var(--sub)}
+  .footer{font-size:.82rem;color:var(--sub);margin-top:30px;border-top:1px solid var(--line);padding-top:16px}
+  .footer a{color:var(--onsen)}
+  .verify{background:#fff;border:1px dashed var(--warn);border-radius:12px;padding:16px 18px;margin-top:10px}
+  .verify h4{color:var(--warn);font-size:.95rem;margin-bottom:6px}
+  .verify ul{margin-left:18px;font-size:.86rem;color:#555}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>福岡住宿候選清單 ♨ 含「步行可達錢湯／溫泉」條件</h1>
+    <p>入住 2026/11/1（六）－ 2026/11/6（四），共 5 晚｜7 人・整棟／民宿</p>
+    <div class="meta">
+      <span class="chip">👥 7 人</span>
+      <span class="chip">🏠 整棟／民宿</span>
+      <span class="chip">🚻 ≥ 2 廁所</span>
+      <span class="chip">🚇 近地鐵</span>
+      <span class="chip">🧺 洗衣機</span>
+      <span class="chip">💰 NT$8,000–15,000／晚</span>
+      <span class="chip new">♨ 新增：步行可達錢湯／溫泉</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="alertbox">
+    ⚠ <b>更正：</b>先前提到的「博多 万葉の湯」<b>已於 2024/8 閉館</b>，本清單不再列入。下方所列湯屋均為現仍營業者（仍建議出發前再查證時間）。
+  </div>
+
+  <div class="rec">
+    <div style="font-size:1.6rem">♨</div>
+    <div>
+      <b>結論先行（加入錢湯條件後，排序有變）：</b>
+      最推薦 <b>① 彩ホテル 住吉棟（曙／天）</b>——唯一同時做到「整棟貸切 ＋ 步行約 12 分到百年老錢湯『鶴亀湯』 ＋ 近博多駅」，最貼合「重開機泡湯」主題；
+      想泡<b>真・天然溫泉且最省</b>選 <b>② 福岡 Condominium</b>（步行 5 分到博多駅天然溫泉『八百治の湯』）；
+      <b>③ Rakuten STAY 博多祇園</b> 設施新、訂房最透明，但步行到溫泉較遠。
+      錢湯多為<b>男女分湯（裸湯）</b>；想全團一起可另找<b>貸切風呂（包場）</b>，下方有標。
+    </div>
+  </div>
+
+  <h2>三大推薦候選（依新條件重排）</h2>
+  <p class="lead">每案加上「♨ 最近湯屋」區塊。價格為公開區間，<b>11/1–11/6 房價、空房與湯屋營業時間均需出發前即時查證</b>（NT$1 ≒ ¥4.7 估算）。</p>
+
+  <div class="grid">
+
+    <!-- ① 彩ホテル 住吉棟 -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank r1">① 最推薦・整棟＋步行泡湯</span>
+          <h3>彩（いろどり）ホテル — 住吉棟（曙／天）一棟貸切</h3>
+          <div class="tag">福岡市博多区住吉5-11-7｜整棟出租・每棟 12 名</div>
+        </div>
+        <div class="price">
+          <div class="num">約 ¥30,000–60,000</div>
+          <small>／晚（整棟・依日期・需查證）</small>
+          <small>≒ NT$6,400–12,800</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">整棟貸切（無人ホテル）</span>
+          <span class="pill">12 名（7 人寬鬆）</span>
+          <span class="pill">町家和風</span>
+          <span class="pill">線上 check-in</span>
+        </div>
+        <table class="crit">
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 曙／天上限 12 名</td></tr>
+          <tr><td>近地鐵</td><td><span class="b partial">PARTIAL</span> 住吉一帶，博多駅徒步約 12 分、櫛田神社前駅可達；確認該棟徒步分鐘</td></tr>
+          <tr><td>整棟／民宿</td><td><span class="b pass">PASS</span> 完整整棟，最符合偏好</td></tr>
+          <tr><td>洗衣機</td><td><span class="b partial">PARTIAL</span> 通常配備，逐棟查證</td></tr>
+          <tr><td>≥2 廁所</td><td><span class="b partial">PARTIAL</span> 2 層町家常見 2 衛浴；以平面圖／客服為準</td></tr>
+          <tr><td>♨ 步行湯屋</td><td><span class="b pass">PASS</span> 步行可達老錢湯，主題最契合</td></tr>
+        </table>
+        <div class="onsenbox">
+          <h5>♨ 最近湯屋</h5>
+          <div class="o"><span class="dist">徒步約 12 分</span><b>鶴亀湯</b>（住吉2-13-9）｜大正 10 年（1921）創業老錢湯，富士山壁畫＋三溫暖。大人 ¥550、サウナ +¥250。營業 15:00–24:00，<b>週日公休</b>（注意 11/2 為週日）。</div>
+          <div class="o"><span class="dist">博多駅 5 分</span><b>八百治の湯</b>（天然溫泉，可順道）｜詳見②案。</div>
+        </div>
+        <div class="links">
+          <a href="https://www.nan-ei.com/irodori/" target="_blank">官方總覽（各棟平面圖）</a>
+          <a class="alt" href="https://fukuoka1010.com/fukuoka/tsurukameyu/" target="_blank">鶴亀湯介紹</a>
+          <a class="alt" href="https://www.booking.com/hotel/jp/cai-hoteru-qian.ja.html" target="_blank">Booking（彩示例棟）</a>
+        </div>
+        <div class="note">⚠ 查證：① 曙／天棟「最近地鐵徒步分鐘」與洗衣機、衛浴數；② 鶴亀湯週日休、營業由 15:00 起，安排泡湯日避開 11/2；③ 11/1–11/6 整棟空房與總價。</div>
+      </div>
+    </div>
+
+    <!-- ② 福岡 Condominium -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank">② 真天然溫泉・最省</span>
+          <h3>福岡 Condominium（福岡公寓式飯店）</h3>
+          <div class="tag">福岡市博多区博多駅前／東｜JR 博多駅 徒步約 10 分</div>
+        </div>
+        <div class="price">
+          <div class="num">約 ¥8,000–15,000</div>
+          <small>／室＋清掃費 ¥5,000–7,000（整段）・需查證</small>
+          <small>≒ 全 5 晚約 NT$10,000–18,000</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">5-G：3 臥室・10 名</span>
+          <span class="pill">7-F：2 臥室・9 名</span>
+          <span class="pill">全室廚房・可自炊</span>
+          <span class="pill">官網最低價保證</span>
+        </div>
+        <table class="crit">
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 多房型上限 8–10 名</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> JR／地鐵博多駅徒步約 10 分</td></tr>
+          <tr><td>整棟／民宿</td><td><span class="b partial">PARTIAL</span> 公寓式套房（非整棟），家庭式大空間</td></tr>
+          <tr><td>洗衣機</td><td><span class="b partial">PARTIAL</span> 須向客服確認指定房型</td></tr>
+          <tr><td>≥2 廁所</td><td><span class="b partial">PARTIAL</span> 多房型 2 臥室；衛浴數查證</td></tr>
+          <tr><td>♨ 步行湯屋</td><td><span class="b pass">PASS</span> 步行 5 分到天然溫泉，最佳泡湯動線</td></tr>
+        </table>
+        <div class="onsenbox">
+          <h5>♨ 最近湯屋</h5>
+          <div class="o"><span class="dist">博多駅 5 分</span><b>八百治の湯</b>（八百治博多ホテル内）｜博多站前地下 1,257m 湧出之天然溫泉，大／中浴池＋三溫暖，男女分湯，免費租毛巾。日歸可，營業 6:30–9:30／12:00–24:00。<b>日歸入浴價需查證</b>（約 ¥1,000–1,500）。</div>
+          <div class="o"><span class="dist">徒步 12 分</span><b>鶴亀湯</b>｜百年老錢湯，¥550（詳見①案）。</div>
+        </div>
+        <div class="links">
+          <a href="https://fukuoka-hotel.jp/" target="_blank">福岡 Condominium 官方</a>
+          <a class="alt" href="https://www.yaoji.co.jp/spa/" target="_blank">八百治の湯官方</a>
+          <a class="alt" href="https://fukuoka-hotel.jp/about/guestroom/5-g/" target="_blank">5-G（3 臥室）</a>
+        </div>
+        <div class="note">⚠ 查證：① 指定房型洗衣機＋2 衛浴（建議電話 092-432-7470）；② 八百治の湯日歸入浴價與是否接待非住客；③ 含清掃費總價。</div>
+      </div>
+    </div>
+
+    <!-- ③ Rakuten STAY -->
+    <div class="card">
+      <div class="card-top">
+        <div>
+          <span class="rank">③ 設施新・訂房最透明</span>
+          <h3>Rakuten STAY 博多祇園 — Deluxe 型</h3>
+          <div class="tag">福岡市博多区｜地鐵呉服町駅 徒步約 4–5 分</div>
+        </div>
+        <div class="price">
+          <div class="num">約 ¥28,000–55,000</div>
+          <small>／晚（8 人房・依日期・需查證）</small>
+          <small>≒ NT$6,000–11,700</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="row">
+          <span class="pill">Deluxe 53㎡・最大 8 名</span>
+          <span class="pill">獨立浴室＋淋浴＋廁所</span>
+          <span class="pill">洗衣（乾衣）機</span>
+          <span class="pill">樂天連鎖</span>
+        </div>
+        <table class="crit">
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 上限 8 名</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> 呉服町駅徒步 4–5 分；博多駅地鐵約 10 分</td></tr>
+          <tr><td>整棟／民宿</td><td><span class="b pass">PASS</span> 大型獨立單元，近民宿</td></tr>
+          <tr><td>洗衣機</td><td><span class="b pass">PASS</span> 官方明列</td></tr>
+          <tr><td>≥2 廁所</td><td><span class="b partial">PARTIAL</span> 浴廁分離；是否 2 套衛浴查證</td></tr>
+          <tr><td>♨ 步行湯屋</td><td><span class="b partial">PARTIAL</span> 步行可達者較少，多需 1 站地鐵或巴士</td></tr>
+        </table>
+        <div class="onsenbox">
+          <h5>♨ 最近湯屋</h5>
+          <div class="o"><span class="dist">徒步約 18 分／1 站</span><b>鶴亀湯</b>（住吉）｜老錢湯 ¥550，從呉服町搭地鐵或散步可達。</div>
+          <div class="o"><span class="dist">巴士／中洲川端 18 分</span><b>みなと温泉 波葉の湯</b>（博多ふ頭）｜天然溫泉露天，男女分湯。大人平日 ¥1,100／假日 ¥1,250，10:00–23:00。<b>設貸切風呂（4 名/室）¥3,900／90 分</b>——適合想全團包場、不裸湯共浴者。</div>
+        </div>
+        <div class="links">
+          <a href="https://stay.rakuten.co.jp/hakata-gion/" target="_blank">官方網站</a>
+          <a class="alt" href="https://travel.rakuten.co.jp/HOTEL/170210/170210.html" target="_blank">樂天訂房</a>
+          <a class="alt" href="https://namiha.jp/info/" target="_blank">波葉の湯 料金</a>
+        </div>
+        <div class="note">⚠ 查證：① 11/1–11/6 空房與含稅總價；② 廁所是否 2 間；③ 若重視泡湯動線，此案需接受短程交通。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>♨ 周邊湯屋一覽（現營業）</h2>
+  <div class="scroll">
+    <table class="cmp">
+      <tr>
+        <th>湯屋</th><th>類型</th><th>位置／交通</th><th>價格（大人）</th><th>營業時間</th><th>男女・包場</th>
+      </tr>
+      <tr>
+        <td>鶴亀湯</td><td>老錢湯（1921）</td><td>博多区住吉2-13-9／博多駅徒步12分</td>
+        <td>¥550（サウナ+¥250）</td><td>15:00–24:00・週日休</td><td>男女別／無包場</td>
+      </tr>
+      <tr>
+        <td>八百治の湯</td><td>天然溫泉（飯店內）</td><td>博多区・博多駅徒步5分</td>
+        <td>日歸價需查證（約¥1,000–1,500）</td><td>6:30–9:30／12:00–24:00</td><td>男女別／免費毛巾</td>
+      </tr>
+      <tr>
+        <td>みなと温泉 波葉の湯</td><td>天然溫泉露天</td><td>博多ふ頭・築港本町／中洲川端徒步18分・巴士</td>
+        <td>平日¥1,100／假日¥1,250</td><td>10:00–23:00（最終受付22:15）</td><td>男女別／<b>貸切¥3,900/90分(4名)</b></td>
+      </tr>
+      <tr>
+        <td>キャビナス福岡</td><td>三溫暖・膠囊</td><td>博多区博多駅前2-18-1／博多駅徒步1分</td>
+        <td>180分 ¥1,870（假日+¥220）</td><td>24 小時</td><td><b>男性專用</b>（女性不可）</td>
+      </tr>
+    </table>
+  </div>
+  <p class="lead" style="margin-top:8px">註：傳統錢湯／溫泉為男女分湯裸浴。若 7 人想「一起泡」，請走<b>波葉の湯貸切風呂</b>或找有家庭湯屋的店（每場 4 名上限，可分批／加開）。</p>
+
+  <h2>♨ 一分鐘消費指南</h2>
+  <p class="lead">老錢湯：入口付一次定額（¥550 左右），三溫暖另加 ¥250，毛巾/沐浴乳要自備或加購；待 1–2 小時無限制。天然溫泉/超錢湯：定額約 ¥1,000–1,500，多含基本盥洗用品，可待 2–3 小時。複合館（如キャビナス）按時段計費、館內手環消費、離場結清。多數場所<b>有刺青限制</b>，有紋身的同伴請先查店規。</p>
+
+  <div class="verify">
+    <h4>📌 訂房／泡湯前必查（資訊會變動）</h4>
+    <ul>
+      <li><b>住宿</b>：11/1–11/6 空房與含稅總價；2 間廁所＋洗衣機逐案向業者確認（皆標 PARTIAL）。</li>
+      <li><b>鶴亀湯週日休</b>：11/2（日）不營業，泡湯日請排其他天；且 15:00 才開門。</li>
+      <li><b>八百治の湯</b>：確認日歸（非住客）入浴價與時段。</li>
+      <li><b>包場需求</b>：波葉の湯貸切風呂限 4 名/室，7 人需分 2 場或分批。</li>
+      <li><b>刺青規定</b>：有紋身同伴逐店查證可否入浴。</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>資料來源：
+      <a href="https://www.nan-ei.com/irodori/" target="_blank">彩ホテル官方</a>、
+      <a href="https://fukuoka-hotel.jp/" target="_blank">福岡 Condominium 官方</a>、
+      <a href="https://stay.rakuten.co.jp/hakata-gion/" target="_blank">Rakuten STAY 博多祇園官方</a>、
+      <a href="https://fukuoka1010.com/fukuoka/tsurukameyu/" target="_blank">福岡よか風呂・鶴亀湯</a>、
+      <a href="https://www.yaoji.co.jp/spa/" target="_blank">八百治の湯官方</a>、
+      <a href="https://namiha.jp/info/" target="_blank">波葉の湯官方</a>、
+      <a href="https://cabinas.jp/sp/spa.php" target="_blank">キャビナス福岡官方</a>。
+    </p>
+    <p style="margin-top:8px">製作：旅遊規劃顧問｜彙整日 2026-06-19｜NT$1≒¥4.7 為估算。房價／空房／湯屋時間以各連結即時頁面為準。「博多 万葉の湯」已閉館不列入。</p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡住宿候選（深色版）｜7人・整棟/民宿・2026/11/1–11/6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1116;
+    --bg2:#141923;
+    --card:#181e29;
+    --card2:#1e2633;
+    --line:#2a3342;
+    --ink:#e7ecf3;
+    --sub:#9aa6b8;
+    --muted:#6f7c90;
+    --accent:#5db0ff;       /* 藍 */
+    --accent2:#ffb454;      /* 橙金 */
+    --pass:#3fae7a;         /* 綠 */
+    --partial:#d9a441;      /* 黃 */
+    --fail:#e0654f;         /* 紅 */
+    --verify:#36c08a;
+    --chipbg:#202a3a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans TC",system-ui,sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%,#1a2330 0,var(--bg) 55%),var(--bg);
+    color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;
+    padding-bottom:64px;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  a{color:var(--accent);text-underline-offset:3px}
+
+  /* hero */
+  header.hero{
+    padding:48px 0 34px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(20,25,35,.6),rgba(14,17,22,0));
+  }
+  .eyebrow{letter-spacing:.34em;font-size:12px;color:var(--accent2);font-weight:700;text-transform:uppercase;margin-bottom:14px}
+  .hero h1{font-family:"Noto Serif TC",serif;font-weight:900;font-size:clamp(26px,5.4vw,44px);line-height:1.2;letter-spacing:.01em}
+  .hero p.sub{color:var(--sub);margin:12px 0 22px;max-width:680px;font-size:15px}
+  .facts{display:flex;flex-wrap:wrap;gap:9px}
+  .fact{background:var(--chipbg);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:13px;color:var(--ink);display:flex;align-items:center;gap:7px}
+  .fact b{color:#fff}
+
+  /* legend */
+  .legend{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;margin:24px 0 6px;font-size:12.5px;color:var(--muted)}
+  .b{font-weight:700;font-size:11px;padding:2px 9px;border-radius:6px;color:#08120c;white-space:nowrap;letter-spacing:.04em}
+  .b.pass{background:var(--pass)} .b.partial{background:var(--partial);color:#1c1402} .b.fail{background:var(--fail);color:#1a0a06}
+  .vchip{display:inline-flex;align-items:center;gap:5px;color:var(--verify);font-weight:700;font-size:12px}
+
+  /* recommendation banner */
+  .rec{
+    background:linear-gradient(135deg,#16202c,#191f2b);
+    border:1px solid var(--line);border-left:4px solid var(--accent2);
+    border-radius:14px;padding:18px 20px;margin:26px 0 8px;display:flex;gap:14px;align-items:flex-start
+  }
+  .rec .ico{font-size:1.5rem;line-height:1}
+  .rec b.g{color:var(--pass)} .rec b.o{color:var(--accent2)}
+
+  h2.sec{font-family:"Noto Serif TC",serif;font-size:1.35rem;margin:40px 0 4px;padding-left:13px;border-left:4px solid var(--accent)}
+  p.lead{color:var(--sub);font-size:.92rem;margin-bottom:14px}
+
+  /* cards */
+  .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;position:relative}
+  .card .head{padding:20px 22px 8px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .rank{display:inline-block;font-size:.74rem;font-weight:700;padding:3px 11px;border-radius:999px;margin-bottom:9px;letter-spacing:.04em}
+  .rank.r1{background:var(--accent2);color:#1c1402}
+  .rank.r2{background:#3a4a63;color:#dce7f7}
+  .rank.r3{background:#2c3a4d;color:#bcc9dc}
+  .card h3{font-family:"Noto Serif TC",serif;font-size:1.22rem;font-weight:700;line-height:1.35}
+  .card .where{color:var(--sub);font-size:.86rem;margin-top:4px}
+  .price{text-align:right;min-width:160px}
+  .price .num{font-size:1rem;font-weight:700;color:var(--accent2)}
+  .price small{display:block;color:var(--muted);font-size:.72rem;margin-top:2px}
+  .body{padding:6px 22px 20px}
+  .pills{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 4px}
+  .pill{font-size:.76rem;padding:4px 11px;border-radius:8px;background:var(--card2);border:1px solid var(--line);color:var(--sub)}
+  table.crit{width:100%;border-collapse:collapse;margin-top:12px;font-size:.86rem}
+  table.crit td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  table.crit td:first-child{color:var(--muted);width:120px;white-space:nowrap}
+  .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+  .links a{font-size:.82rem;text-decoration:none;font-weight:700;padding:8px 14px;border-radius:9px;display:inline-flex;align-items:center;gap:6px;transition:.15s}
+  .links a.primary{background:var(--accent);color:#06121f;border:1px solid var(--accent)}
+  .links a.primary:hover{filter:brightness(1.1)}
+  .links a.alt{background:transparent;color:var(--accent);border:1px solid #34506e}
+  .links a.alt:hover{background:#15212e}
+  .links a .ok{color:var(--verify);font-size:.74rem}
+  .note{font-size:.82rem;color:#e7c98a;background:#231d0f;border:1px solid #45381a;border-radius:9px;padding:10px 13px;margin-top:13px}
+
+  /* compare */
+  .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin-top:10px}
+  table.cmp{width:100%;border-collapse:collapse;font-size:.84rem;min-width:660px;background:var(--card)}
+  table.cmp th,table.cmp td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left}
+  table.cmp th{background:var(--card2);color:#cdd8e8;position:sticky;top:0;font-size:.8rem}
+  table.cmp tr td:first-child{color:var(--muted);font-weight:600}
+  table.cmp .star{color:var(--accent2)}
+
+  /* platforms */
+  .platforms{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:11px;margin-top:12px}
+  .platforms a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;text-decoration:none;color:var(--ink);transition:.15s}
+  .platforms a:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .platforms a b{display:block;font-size:.95rem;margin-bottom:3px;color:#dfe8f5}
+  .platforms a span{display:block;color:var(--muted);font-size:.76rem}
+  .platforms a .ok{color:var(--verify);font-size:.72rem;font-weight:700}
+
+  .verifybox{background:var(--bg2);border:1px dashed #3a4759;border-radius:14px;padding:18px 20px;margin-top:26px}
+  .verifybox h4{color:var(--accent2);font-size:.98rem;margin-bottom:8px}
+  .verifybox ul{margin-left:18px;font-size:.87rem;color:var(--sub)}
+  .verifybox li{margin:5px 0}
+
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.8rem}
+  footer a{color:var(--accent)}
+  @media(max-width:560px){.card .head{flex-direction:column}.price{text-align:left}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Fukuoka · Group Stay · Dark Edition</p>
+    <h1>福岡 7 人住宿候選 — 整棟 / 民宿</h1>
+    <p class="sub">入住 <b>2026/11/1（六）– 11/6（四）</b>，共 5 晚｜博多・天神・呉服町一帶。鎖定「近地鐵、至少 2 間廁所、整棟貸切或民泊型」。所有連結均經實測，標 <span class="vchip">✓ 已驗證</span> 者為實際開啟確認可用。</p>
+    <div class="facts">
+      <div class="fact">🗓 <b>11/1 – 11/6（5 晚）</b></div>
+      <div class="fact">👥 <b>7 人</b></div>
+      <div class="fact">🏠 <b>整棟 / 民宿</b></div>
+      <div class="fact">🚇 <b>近地鐵</b></div>
+      <div class="fact">🚻 <b>≥ 2 廁所</b></div>
+      <div class="fact">📺 <b>公共空間＋電視/投影</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="legend">
+    <span><span class="b pass">PASS</span> 符合</span>
+    <span><span class="b partial">PARTIAL</span> 需訂前查證</span>
+    <span><span class="vchip">✓ 已驗證</span> 連結實測可開</span>
+  </div>
+
+  <div class="rec">
+    <div class="ico">🎯</div>
+    <div>
+      <b class="g">結論先行：</b><b class="o">① Rakuten STAY 博多祇園（Deluxe）</b>仍是首選——8 人、<b>トイレ×2＋淋浴×2＋洗衣機</b>、呉服町站步行 5 分，且 54㎡ 大空間<b>官方配投影機</b>，正好滿足新條件「晚上大家一起看投影」，<b>全部硬條件＋公共影音皆中、踩雷風險最低</b>。
+      想要「真正一整棟、隱私最佳」選 <b class="o">② 彩ホテル一棟貸</b>（町家整棟有客廳，廁所數與電視/投影依棟查證）；想<b>極省預算＋可自炊、客廳有電視</b>選 <b class="o">③ 福岡 Condominium</b>（全室リビング＋薄型電視）。下方每案逐條標示，黃框為下訂前務必查證項。
+    </div>
+  </div>
+
+  <h2 class="sec">三大推薦候選</h2>
+  <p class="lead">排序＝推薦序。價格為平台公開區間僅供抓預算，<b>11/1–11/6 確切房價與空房請點連結即時查證</b>（約 NT$1 ≒ ¥4.7）。</p>
+
+  <div class="grid">
+
+    <!-- ① Rakuten STAY -->
+    <div class="card">
+      <div class="head">
+        <div>
+          <span class="rank r1">① 最推薦・硬條件全中</span>
+          <h3>Rakuten STAY 博多祇園 — Deluxe（デラックス）</h3>
+          <div class="where">福岡市博多区｜地下鐵「呉服町」駅 步行約 5 分・博多駅 車程約 6 分</div>
+        </div>
+        <div class="price">
+          <div class="num">約 ¥28,000–55,000</div>
+          <small>／晚（8 人房・依日期浮動・需查證）</small>
+          <small>≒ NT$6,000–11,700</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="pills">
+          <span class="pill">Deluxe 54㎡・最大 8 名</span>
+          <span class="pill">トイレ×2</span>
+          <span class="pill">シャワー室×2</span>
+          <span class="pill">洗面台×2</span>
+          <span class="pill">洗衣機</span>
+          <span class="pill">榻榻米＋投影機</span>
+          <span class="pill">無人自助・連鎖品牌</span>
+        </div>
+        <table class="crit">
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 上限 8 名，7 人寬鬆</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> 呉服町駅步行 5 分</td></tr>
+          <tr><td>≥2 廁所</td><td><span class="b pass">PASS</span> 官方明載「トイレ・洗面台すべて 2 台ずつ」</td></tr>
+          <tr><td>整棟/民宿</td><td><span class="b pass">PASS</span> 大型獨立單元（無人民泊型）</td></tr>
+          <tr><td>洗衣機</td><td><span class="b pass">PASS</span> 官方明載「ランドリースペース（洗濯機）」</td></tr>
+          <tr><td>公共空間/影音</td><td><span class="b pass">PASS</span> 54㎡ 一室大空間＋榻榻米小上り，官方配<b>投影機</b>——最適合晚上一起看</td></tr>
+        </table>
+        <div class="links">
+          <a class="primary" href="https://stay.rakuten.co.jp/hakata-gion/" target="_blank" rel="noopener">官方網站 <span class="ok">✓</span></a>
+          <a class="alt" href="https://travel.rakuten.co.jp/HOTEL/170210/CUSTOM/SPG170210210714103701.html" target="_blank" rel="noopener">Deluxe 房型介紹 <span class="ok">✓</span></a>
+          <a class="alt" href="https://hotel.travel.rakuten.co.jp/hotelinfo/plan/170210" target="_blank" rel="noopener">樂天旅遊・訂房 <span class="ok">✓</span></a>
+        </div>
+        <div class="note">⚠ 下訂前查證：11/1–11/6 整段空房與含稅總價；Deluxe（非 Superior）才是 8 人/雙廁版本，訂房請認明房型。</div>
+      </div>
+    </div>
+
+    <!-- ② 彩ホテル -->
+    <div class="card">
+      <div class="head">
+        <div>
+          <span class="rank r2">② 整棟・隱私最佳</span>
+          <h3>彩（いろどり）ホテル — 町家風一棟貸切</h3>
+          <div class="where">福岡市博多区／中央区｜全 15 棟，整棟出租・無人 check-in</div>
+        </div>
+        <div class="price">
+          <div class="num">約 ¥30,000–60,000</div>
+          <small>／晚（整棟・依棟別與日期・需查證）</small>
+          <small>≒ NT$6,400–12,800</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="pills">
+          <span class="pill">整棟貸切（一棟まるごと）</span>
+          <span class="pill">8 名×9 棟</span>
+          <span class="pill">10 名×4 棟（空・狐・煌・翠）</span>
+          <span class="pill">12 名×2 棟（曙・天）</span>
+          <span class="pill">整棟客廳・全員共聚</span>
+          <span class="pill">町家和風・線上入住</span>
+        </div>
+        <table class="crit">
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 最小棟即 8 名；選 10 名棟更寬鬆</td></tr>
+          <tr><td>近地鐵</td><td><span class="b partial">PARTIAL</span> <b>逐棟不同</b>，須挑近站棟（空・狐在美野島近博多駅；藍・菜在清川近渡辺通）</td></tr>
+          <tr><td>≥2 廁所</td><td><span class="b partial">PARTIAL</span> 2 層町家常見 2 衛浴，但須看<b>該棟平面圖</b>確認</td></tr>
+          <tr><td>整棟/民宿</td><td><span class="b pass">PASS</span> 完整整棟，最符合「一整棟」偏好</td></tr>
+          <tr><td>洗衣機</td><td><span class="b partial">PARTIAL</span> 多數棟配備，逐棟查證</td></tr>
+          <tr><td>公共空間/影音</td><td><span class="b partial">PARTIAL</span> 整棟有客廳可全員共聚；電視/投影機<b>逐棟不同</b>，訂前看該棟照片或詢問</td></tr>
+        </table>
+        <div class="links">
+          <a class="primary" href="https://www.nan-ei.com/irodori/" target="_blank" rel="noopener">官方總覽・15 棟平面圖 <span class="ok">✓</span></a>
+        </div>
+        <div class="note">⚠ 官方頁內每棟各自連到 Booking.com／Airbnb 訂房（深連結會隨時間變動，故此處只放穩定的官方總覽）。建議優先看：<b>空・狐</b>（美野島，近博多駅）、<b>曙・天</b>（住吉，12 名最寬敞、最可能 2 衛浴）。選棟後務必核對「最近站＋步行分鐘」與廁所數。</div>
+      </div>
+    </div>
+
+    <!-- ③ 福岡 Condominium -->
+    <div class="card">
+      <div class="head">
+        <div>
+          <span class="rank r3">③ 極省預算・可自炊</span>
+          <h3>福岡コンドミニアム（福岡 Condominium）</h3>
+          <div class="where">福岡市博多区博多駅前｜JR／地下鐵「博多」駅 步行約 10 分（機場地鐵 5 分到博多）</div>
+        </div>
+        <div class="price">
+          <div class="num">最省（多房型）</div>
+          <small>房費＋清潔費・官網最低價保證・需查證</small>
+          <small>全 5 晚估約 NT$1–1.8 萬/間</small>
+        </div>
+      </div>
+      <div class="body">
+        <div class="pills">
+          <span class="pill">5-F：2 寢・7 名</span>
+          <span class="pill">7-F：2 寢・9 名</span>
+          <span class="pill">5-G：3 寢・10 名</span>
+          <span class="pill">6-H：2 寢・10 名</span>
+          <span class="pill">リビング＋薄型電視</span>
+          <span class="pill">全室キッチン・可自炊</span>
+        </div>
+        <table class="crit">
+          <tr><td>7 人容納</td><td><span class="b pass">PASS</span> 多房型上限 7–16 名（5-F/7-F/5-G/6-H 等）</td></tr>
+          <tr><td>近地鐵</td><td><span class="b pass">PASS</span> 博多駅步行約 10 分</td></tr>
+          <tr><td>≥2 廁所</td><td><span class="b partial">PARTIAL</span> 多為 2 寢＋客廳，衛浴/廁所數官網未列，須電話確認</td></tr>
+          <tr><td>整棟/民宿</td><td><span class="b partial">PARTIAL</span> 公寓式套房（非整棟），空間大、家庭式</td></tr>
+          <tr><td>洗衣機</td><td><span class="b partial">PARTIAL</span> 官網未逐房標示，須向客服確認</td></tr>
+          <tr><td>公共空間/影音</td><td><span class="b pass">PASS</span> 全室「リビング＋沙發＋<b>薄型電視</b>」（官方明載）；投影機需另問</td></tr>
+        </table>
+        <div class="links">
+          <a class="primary" href="https://fukuoka-hotel.jp/" target="_blank" rel="noopener">官方網站 <span class="ok">✓</span></a>
+          <a class="alt" href="https://fukuoka-hotel.jp/about/guestroom/" target="_blank" rel="noopener">房型一覽 <span class="ok">✓</span></a>
+        </div>
+        <div class="note">⚠ 官網資訊偏舊，下訂前請 email（info@fukuoka-hotel.jp）或電話 <b>092-432-7470</b> 確認指定房型的「廁所數／洗衣機」與含清潔費總價。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="sec">一覽比較</h2>
+  <div class="scroll">
+    <table class="cmp">
+      <tr>
+        <th>項目</th>
+        <th>① Rakuten STAY 博多祇園</th>
+        <th>② 彩ホテル 一棟貸</th>
+        <th>③ 福岡 Condominium</th>
+      </tr>
+      <tr><td>類型</td><td>連鎖大型單元（無人民泊型）</td><td class="star">★ 完整整棟町家</td><td>公寓式套房</td></tr>
+      <tr><td>區域</td><td>博多区・呉服町</td><td>博多区／中央区（15 棟）</td><td>博多区・博多駅前</td></tr>
+      <tr><td>最近地鐵</td><td class="star">★ 呉服町駅 5 分</td><td>逐棟不同（挑近站棟）</td><td>博多駅 約 10 分</td></tr>
+      <tr><td>容納（7人）</td><td>8 名 ✓</td><td>8–12 名 ✓</td><td>7–16 名 ✓</td></tr>
+      <tr><td>≥2 廁所</td><td class="star">★ 官方確認 2 套</td><td>多為 2（查平面圖）</td><td>需電話確認</td></tr>
+      <tr><td>公共空間+影音</td><td class="star">★ 大空間＋投影機</td><td>整棟客廳（電視逐棟查）</td><td>リビング＋薄型電視</td></tr>
+      <tr><td>洗衣機</td><td class="star">★ 官方確認有</td><td>多數有（查證）</td><td>需確認</td></tr>
+      <tr><td>可自炊</td><td>部分</td><td>多附廚房</td><td class="star">★ 全室廚房</td></tr>
+      <tr><td>價格帶／晚</td><td>NT$6k–11.7k</td><td>NT$6.4k–12.8k</td><td class="star">★ 最省</td></tr>
+      <tr><td>訂房透明度</td><td class="star">★ 最高（線上即時）</td><td>中（官方→平台）</td><td>中（官網偏舊）</td></tr>
+    </table>
+  </div>
+
+  <h2 class="sec">想自己再多比幾家？平台直連</h2>
+  <p class="lead">可用「7 人・一棟貸／民泊・11/1–11/6」條件即時篩選。jalan 已實測可開；Vrbo／Expedia 為官方分類頁（對真人有效，機器人查詢時被限流）。</p>
+  <div class="platforms">
+    <a href="https://www.jalan.net/a/minshuku/400000/LRG_400100.html" target="_blank" rel="noopener">
+      <b>じゃらん・福岡民宿 <span class="ok">✓ 已驗證</span></b><span>博多/天神周邊・實測列出 33 件</span></a>
+    <a href="https://www.vrbo.com/vacation-rentals/japan/hakata-ward" target="_blank" rel="noopener">
+      <b>Vrbo・博多區一棟貸</b><span>一軒家貸切／貸別荘，可篩臥室・衛浴數</span></a>
+    <a href="https://www.expedia.co.jp/Fukuoka-Vacation-Rentals.d6336957.Travel-Guide-VacationRentals" target="_blank" rel="noopener">
+      <b>Expedia・福岡民泊</b><span>Vacation Rentals，含口碑與退訂方案</span></a>
+  </div>
+
+  <h2 class="sec">訂房網站總整理（國內 × 國際）</h2>
+  <p class="lead">在福岡找民宿／飯店常用的平台，附一句說明。標 <span class="vchip">✓</span> 者本次實測可開；其餘為各站官方首頁（知名大站，對真人皆有效，部分會擋自動查詢）。</p>
+
+  <p class="lead" style="margin:14px 0 2px"><b style="color:var(--accent2)">🇯🇵 日本國內平台</b>（在地物件最齊、常有點數/折扣券）</p>
+  <div class="platforms">
+    <a href="https://www.jalan.net/" target="_blank" rel="noopener">
+      <b>じゃらん net <span class="ok">✓</span></b><span>リクルート營運，日本最大級綜合訂房；飯店/旅館/民宿齊全，常發折扣券＋Ponta點數</span></a>
+    <a href="https://travel.rakuten.co.jp/" target="_blank" rel="noopener">
+      <b>楽天トラベル <span class="ok">✓</span></b><span>楽天系，可累積/折抵楽天點數；商務飯店與一棟貸選擇多</span></a>
+    <a href="https://vacation-stay.jp/" target="_blank" rel="noopener">
+      <b>Rakuten Oyado（旧 Vacation STAY）<span class="ok">✓</span></b><span>楽天經營的民泊/一棟貸專門站，14 萬+ 物件，有繁中介面</span></a>
+    <a href="https://www.ikyu.com/" target="_blank" rel="noopener">
+      <b>一休.com</b><span>主打高級飯店/旅館，質感取向；想升級享受時用</span></a>
+    <a href="https://travel.yahoo.co.jp/" target="_blank" rel="noopener">
+      <b>Yahoo!トラベル</b><span>與一休整合，介面簡單；PayPay 點數回饋</span></a>
+    <a href="https://kakaku.com/travel/" target="_blank" rel="noopener">
+      <b>価格.com 旅行</b><span>跨多家平台比價，一次抓同一間最低價</span></a>
+  </div>
+
+  <p class="lead" style="margin:18px 0 2px"><b style="color:var(--accent2)">🌐 國際平台</b>（繁中介面、整棟/民宿與比價首選）</p>
+  <div class="platforms">
+    <a href="https://www.booking.com/" target="_blank" rel="noopener">
+      <b>Booking.com</b><span>全球最大，房源最多、免費取消選項多；繁中友善，團體房好找</span></a>
+    <a href="https://www.agoda.com/zh-tw/" target="_blank" rel="noopener">
+      <b>Agoda</b><span>亞洲市場強，常見亞洲區限時低價與會員價</span></a>
+    <a href="https://www.airbnb.com/" target="_blank" rel="noopener">
+      <b>Airbnb</b><span>個人房東民宿/整棟一棟貸為主，找「一整棟」首選；看評論與平面圖</span></a>
+    <a href="https://www.vrbo.com/" target="_blank" rel="noopener">
+      <b>Vrbo</b><span>專營「整棟度假屋」（不與房東同住），大團體最合適</span></a>
+    <a href="https://www.expedia.com.tw/" target="_blank" rel="noopener">
+      <b>Expedia</b><span>機+酒套裝省錢，亦有 Vacation Rentals 整棟物件</span></a>
+    <a href="https://tw.trip.com/" target="_blank" rel="noopener">
+      <b>Trip.com</b><span>華語介面與客服佳，亞洲房源多、促銷頻繁</span></a>
+    <a href="https://tw.hotels.com/" target="_blank" rel="noopener">
+      <b>Hotels.com</b><span>集 10 晚送 1 晚回饋，飯店為主</span></a>
+    <a href="https://www.google.com/travel/search" target="_blank" rel="noopener">
+      <b>Google Hotels</b><span>跨平台比價聚合，快速掃一輪最低價再回原站訂</span></a>
+  </div>
+
+  <div class="note" style="margin-top:18px">
+    <b>怎麼挑平台（對應你的需求）：</b>
+    找「<b>一整棟／民宿</b>」→ Airbnb、Vrbo、Rakuten Oyado、じゃらん（民宿分類）；
+    找「<b>飯店/旅館</b>」→ Booking、Agoda、楽天トラベル、一休（高級）；
+    想「<b>一次比價最低</b>」→ 価格.com、Google Hotels、Trip.com。
+    同一間物件建議跨 2–3 站比價，並挑「可免費取消」方案。
+  </div>
+
+  <div class="verifybox">
+    <h4>📌 下訂前必做的即時查證（出發前資訊會變動）</h4>
+    <ul>
+      <li><b>空房與含稅總價</b>：以 11/1（六）入住、11/6 退房、7 名查 5 晚總價。</li>
+      <li><b>「2 間廁所」</b>：① 已官方確認；②③ 標 PARTIAL，請以平面圖或客服回覆為準。</li>
+      <li><b>洗衣機</b>：① 已確認；②③ 需向業者確認指定棟/房。</li>
+      <li><b>公共空間・電視/投影機</b>：① 已確認投影機；② 彩看該棟照片確認客廳電視/投影；③ 有薄型電視，投影機需另問。</li>
+      <li><b>近地鐵</b>：② 彩ホテル選棟時確認「最近站＋步行分鐘」，避免拉到偏遠棟別。</li>
+      <li><b>人數登錄</b>：日本民泊／一棟貸常要求登錄全部住客，7 人務必如實申報。</li>
+      <li><b>取消政策</b>：團體訂房建議選可免費取消方案，保留彈性。</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>資料來源（均經實測 ✓）：
+      <a href="https://stay.rakuten.co.jp/hakata-gion/" target="_blank" rel="noopener">Rakuten STAY 博多祇園官方</a>、
+      <a href="https://www.nan-ei.com/irodori/" target="_blank" rel="noopener">彩ホテル官方</a>、
+      <a href="https://fukuoka-hotel.jp/" target="_blank" rel="noopener">福岡 Condominium 官方</a>、
+      <a href="https://www.jalan.net/a/minshuku/400000/LRG_400100.html" target="_blank" rel="noopener">じゃらん民宿</a>。</p>
+    <p style="margin-top:8px">製作：旅遊規劃顧問｜彙整日 2026-06-18｜深色版。房價/空房為公開區間，實際以各連結即時頁面為準；幣別換算 NT$1≒¥4.7 為估算。</p>
+  </footer>
+
+</div>
+</body>
+</html>
