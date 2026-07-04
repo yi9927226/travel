@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡・博多・北九州 景點候選清單｜2026/11/1–11/6 · 住宿基準：警固</title>
+<style>
+  :root{
+    --bg:#0f1419; --card:#1a2129; --card2:#202a34; --ink:#eef3f7; --sub:#9fb0bf;
+    --line:#2b3742; --accent:#ff8c42; --accent2:#3ecf8e; --blue:#5aa9e6; --gold:#f4c95d;
+    --pass:#3ecf8e; --partial:#f4c95d; --warn:#ff7a7a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(160deg,#0f1419,#131b22 60%,#0f1419);
+    color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 18px 80px}
+  header.hero{text-align:center;padding:30px 16px 18px}
+  .kanji{font-size:13px;letter-spacing:6px;color:var(--accent);font-weight:700}
+  h1{font-size:26px;margin:8px 0 6px;line-height:1.35}
+  .meta{color:var(--sub);font-size:14px}
+  .meta b{color:var(--ink)}
+  .tldr{background:linear-gradient(135deg,#22303c,#1a2129);border:1px solid var(--line);
+    border-left:4px solid var(--accent);border-radius:14px;padding:18px 20px;margin:22px 0}
+  .tldr h2{margin:0 0 8px;font-size:16px;color:var(--accent)}
+  .tldr p{margin:6px 0;font-size:15px}
+  .sec-title{font-size:19px;margin:34px 0 6px;display:flex;align-items:center;gap:9px}
+  .sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+  .sec-sub{color:var(--sub);font-size:13.5px;margin:0 0 14px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  @media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;margin:13px 0}
+  .card h3{margin:0 0 4px;font-size:17px}
+  .card h3 small{color:var(--sub);font-size:12px;font-weight:400;margin-left:6px}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;
+    margin:0 4px 4px 0;letter-spacing:.4px}
+  .p-pass{background:rgba(62,207,142,.16);color:var(--pass);border:1px solid rgba(62,207,142,.4)}
+  .p-part{background:rgba(244,201,93,.15);color:var(--partial);border:1px solid rgba(244,201,93,.4)}
+  .p-c{background:rgba(90,169,230,.15);color:var(--blue);border:1px solid rgba(90,169,230,.4)}
+  .p-star{background:rgba(255,140,66,.16);color:var(--accent);border:1px solid rgba(255,140,66,.45)}
+  .p-new{background:rgba(255,122,122,.14);color:#ff9a9a;border:1px solid rgba(255,122,122,.4)}
+  .tl{margin:0;padding:0;list-style:none}
+  .tl li{position:relative;padding:8px 0 8px 92px;border-bottom:1px dashed var(--line)}
+  .tl li:last-child{border-bottom:none}
+  .tl .tm{position:absolute;left:0;top:8px;font-size:12.5px;color:var(--accent2);font-weight:700;width:82px}
+  .tl .ev b{color:var(--ink)}
+  .tl .ev span{color:var(--sub);font-size:13.5px}
+  .why{margin-top:10px;background:var(--card2);border-radius:10px;padding:11px 13px;font-size:13.5px}
+  .why b{color:var(--accent)}
+  a.gm{color:var(--blue);text-decoration:none;font-size:12.5px;border-bottom:1px dotted var(--blue)}
+  a.gm:hover{color:#9cd}
+  .compare{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+  .compare th,.compare td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+  .compare th{background:var(--card2);color:var(--sub);font-weight:700}
+  .compare .rec{background:rgba(255,140,66,.08)}
+  .compare .rec td:first-child{color:var(--accent);font-weight:700}
+  .food{display:flex;flex-wrap:wrap;gap:9px;margin-top:8px}
+  .food .f{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:13px;flex:1 1 160px}
+  .food .f b{display:block;color:var(--gold);font-size:14px;margin-bottom:2px}
+  .note{background:rgba(255,122,122,.08);border:1px solid rgba(255,122,122,.35);border-radius:12px;padding:14px 16px;font-size:13.5px}
+  .note b{color:var(--warn)}
+  .okbox{background:rgba(62,207,142,.08);border:1px solid rgba(62,207,142,.35);border-radius:12px;padding:14px 16px;font-size:13.5px}
+  .okbox b{color:var(--pass)}
+  ul.clean{margin:6px 0;padding-left:18px}
+  ul.clean li{margin:4px 0}
+  .transitbox{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+  .transitbox .t{background:var(--card2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13px;flex:1 1 200px}
+  .transitbox .t b{display:block;color:var(--accent2);font-size:14px;margin-bottom:2px}
+  footer{text-align:center;color:var(--sub);font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+  footer a{color:var(--blue);text-decoration:none}
+  .legend{font-size:12px;color:var(--sub);margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kanji">FUKUOKA · HAKATA · KITAKYUSHU</div>
+  <h1>福岡・博多・北九州 景點候選清單</h1>
+  <div class="meta"><b>2026/11/1（六）–11/6（四）</b> ｜ 7 人哥們團 · 一棟住到底<br>
+  住宿基準：<b>警固磚屋（Kego Brick House）</b>／福岡市中央區警固3丁目3-11 · 近薬院大通站</div>
+</header>
+
+<div class="tldr">
+  <h2>結論先行（TL;DR）</h2>
+  <p>① <b>住宿地點比原假設更偏天神南側</b>──警固離博多站不是步行圈，但薬院大通站搭七隈線 9–11 分直通博多站（2023年七隈線通博多後免轉乘），走路到天神約 10–13 分，生活機能其實更方便。</p>
+  <p>② <b>北九州重新查證後「翻案」</b>──博多→小倉新幹線只要 15–17 分（¥2,160自由席），一路到門司港合計約 55–70 分，<b style="color:var(--pass)">符合 C4.2（單程≤1.5hr）</b>，比舊版逐日行程「備選不排」的判斷寬鬆很多，值得考慮排進一天，門司港レトロ＋小倉城是這次新挖出的最強候選。</p>
+  <p>③ <b>能古島賞花意外卡在時間內</b>──晚開品種のコスモス（波斯菊）花期到 11 月中旬，11/1–11/6 這幾天還來得及看到，且交通僅需 40–50 分，是既有行程之外的低成本加分項。</p>
+  <div class="legend">標籤：<span class="pill p-c">C4.2</span>單程≤1.5hr 硬約束　<span class="pill p-new">新</span>本次新增查證景點　<span class="pill p-star">招牌</span>亮點　<span class="pill p-part">PARTIAL</span>需注意</div>
+</div>
+
+<!-- ===== 交通基準盤點 ===== -->
+<div class="sec-title"><span class="dot"></span>零、住宿交通基準盤點（警固磚屋）</div>
+<p class="sec-sub">住宿從原假設「博多站徒步圈」修正為「警固／天神南側」，以下時間為之後所有景點估算的基礎，<b style="color:var(--warn)">門牌精確步行時間仍需查證</b>。</p>
+<div class="transitbox">
+  <div class="t"><b>→ 薬院大通駅</b>徒步約 7 分（七隈線）</div>
+  <div class="t"><b>→ 天神（西鉄福岡駅）</b>徒步約 13 分</div>
+  <div class="t"><b>→ 赤坂駅</b>徒步約 13 分（近大濠公園）</div>
+  <div class="t"><b>薬院大通 → 博多站</b>七隈線直通 9–11 分（免轉乘）</div>
+  <div class="t"><b>→ 福岡空港</b>約 20–25 分（需轉乘，末班車需查證）</div>
+</div>
+<div class="note" style="margin-top:12px"><b>需查證：</b>① 警固3丁目3-11 實際門牌到薬院大通站的精確步行分鐘數；② 往返福岡空港的最佳轉乘路線與末班車時刻（現行逐日行程 Day1/Day6 仍寫「博多站 5 分到機場」，實際會多 10–15 分，出發前需依此調整當天抓的時間）。</div>
+
+<!-- ===== 警固/天神/博多 步行地鐵圈 ===== -->
+<div class="sec-title"><span class="dot"></span>一、警固／天神／博多｜步行・地鐵圈（隨時可去，低決策疲勞）</div>
+<p class="sec-sub">這一區塊都在 15 分鐘步行或 1 站地鐵內，適合排進「自由活動」時段，不用特別排整天。</p>
+
+<div class="grid2">
+  <div class="card">
+    <h3>警固神社・警固公園 <small>徒步 3–5 分</small> <span class="pill p-new">新</span></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">住宿正對面等級的近距離，晨間散步、小孩/寵物友善公園，警固神社求姻緣/平安籤詩小有名氣。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=警固神社" target="_blank">地圖</a></p>
+  </div>
+  <div class="card">
+    <h3>柳橋連合市場 <small>徒步 8–10 分</small> <span class="pill p-new">新</span></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">「福岡的廚房」，old-school 市場內有生魚片、熟食小吃攤，適合早上探店當早午餐，比中洲屋台更在地。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=柳橋連合市場" target="_blank">地圖</a></p>
+  </div>
+  <div class="card">
+    <h3>天神・天神地下街 <small>徒步 13 分</small></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">唐吉訶德、藥妝、天神地下街購物圈，既有逐日行程 Day3 已排。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=天神地下街" target="_blank">地圖</a></p>
+  </div>
+  <div class="card">
+    <h3>大濠公園・舞鶴公園（福岡城跡） <small>赤坂駅步行圈</small></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">既有逐日行程 Day3 已排的散步/划船景點；<b style="color:var(--gold)">11月中旬–12月上旬</b>是福岡紅葉見頃，11/1–11/6 這次去偏早，紅葉可能還沒到最佳觀賞期（管理期待）。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=大濠公園" target="_blank">地圖</a></p>
+  </div>
+  <div class="card">
+    <h3>博多：運河城・櫛田神社 <small>薬院大通→博多 9–11分</small></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">既有逐日行程 Day1 已排；從警固過去比原假設多一段地鐵，但仍在 10 分鐘級距，不影響安排。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=櫛田神社" target="_blank">地圖</a></p>
+  </div>
+  <div class="card">
+    <h3>中洲屋台・ウェルビー福岡桑拿 <small>徒步/地鐵約15分</small></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">既有逐日行程 Day3／Day5 已排，警固過去距離仍算方便。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=中洲屋台" target="_blank">地圖</a></p>
+  </div>
+</div>
+
+<!-- ===== 近郊自然/海島 ===== -->
+<div class="sec-title"><span class="dot"></span>二、近郊自然／海島｜季節限定加分（新查證）</div>
+<p class="sec-sub">C4.2 單程≤1.5hr 檢核；這兩個是既有逐日行程沒排到、但交通成本低、11月時序剛好卡到季節尾聲的新選項。</p>
+<table class="compare">
+  <tr><th>景點</th><th>單程交通</th><th>看點</th><th>判定</th></tr>
+  <tr class="rec">
+    <td>能古島（のこのしまアイランドパーク）</td>
+    <td>天神搭西鉄巴士→能古渡船場 約30分＋渡輪10分 <span class="pill p-pass">C4.2 PASS</span></td>
+    <td>波斯菊花海（遲開品種花期到11月中旬，這次剛好還看得到）、隔海眺志賀島</td>
+    <td><b>推薦 ★</b>／可排進原本的自由活動半天</td>
+  </tr>
+  <tr>
+    <td>海の中道海浜公園＋マリンワールド</td>
+    <td>博多站JR香椎線約31分（含轉乘） <span class="pill p-pass">C4.2 PASS</span></td>
+    <td>約100萬株波斯菊、水族館，適合半天</td>
+    <td>備選（與能古島擇一即可，看點類似）</td>
+  </tr>
+</table>
+<div class="note" style="margin-top:12px"><b>需查證：</b>① 能古渡船班次約每小時1班，出發前需對時刻表；② 波斯菊實際花況會因氣候提前/延後謝花，出發前一週建議查最新開花情報。</div>
+
+<!-- ===== 北九州 ===== -->
+<div class="sec-title"><span class="dot"></span>三、北九州一日遊｜門司港レトロ＋小倉城（本次重點新增）</div>
+<p class="sec-sub">舊版逐日行程把北九州列為「備選不排」，理由是估「JR 直達 1–1.5hr」太貼近停損；這次改查<b>新幹線走小倉轉乘</b>的路線，結果單程只要約 55–70 分，<span class="pill p-pass">明確 PASS C4.2</span>，值得重新評估排進一天。</p>
+
+<table class="compare">
+  <tr><th>路段</th><th>方式</th><th>時間</th><th>票價／人</th></tr>
+  <tr><td>警固 → 博多站</td><td>徒步＋七隈線</td><td>約 20 分</td><td>地鐵單程 ¥260</td></tr>
+  <tr class="rec"><td>博多 → 小倉</td><td>新幹線自由席</td><td>15–17 分</td><td>¥2,160（乘車券+自由席特急券）</td></tr>
+  <tr><td>小倉 → 門司港</td><td>JR鹿児島本線快速</td><td>約 14 分</td><td>¥340</td></tr>
+  <tr><td colspan="4" style="color:var(--sub);font-size:12.5px">單程合計（警固→門司港）約 <b style="color:var(--ink)">55–70 分</b>，來回交通費估 <b style="color:var(--ink)">¥5,500／人</b>（警固↔博多¥520＋博多↔小倉新幹線¥4,320＋小倉↔門司港¥680；需查證最新票價）</td></tr>
+</table>
+
+<div class="card" style="margin-top:14px;border-color:var(--accent);box-shadow:0 0 0 1px rgba(255,140,66,.25)">
+  <h3>建議路線（半天～一天） <span class="pill p-star">招牌 ★</span></h3>
+  <ul class="tl">
+    <li><span class="tm">~10:00</span><div class="ev"><b>警固出發</b> <span>薬院大通→博多→新幹線→小倉</span></div></li>
+    <li><span class="tm">~11:00</span><div class="ev"><b>小倉城</b> <span>天守閣、宮本武蔵×佐々木小次郎展、5F展望；小倉站徒步20分或西小倉駅轉乘9分 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=小倉城" target="_blank">地圖</a></span></div></li>
+    <li><span class="tm">12:30</span><div class="ev"><b>午餐後轉往門司港</b> <span>JR快速14分</span></div></li>
+    <li><span class="tm">13:30</span><div class="ev"><b>門司港レトロ散策</b> <span>門司港駅舍（重要文化財）、ブルーウィングもじ、レトロ建築群，步行範圍約15分可逛完主要景點 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=門司港レトロ" target="_blank">地圖</a></span></div></li>
+    <li><span class="tm">15:00</span><div class="ev"><b>焼きカレー</b> <span>門司港發源名物，飯上咖哩加蛋加起司焗烤</span></div></li>
+    <li><span class="tm">16:00</span><div class="ev"><b>門司港レトロ展望室</b> <span>「日本新三大夜景城市」全國第一（2022年認定），黃昏時段景色最好 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=門司港レトロ展望室" target="_blank">地圖</a></span></div></li>
+    <li><span class="tm">~18:00</span><div class="ev"><b>原路搭車返回警固</b> <span></span></div></li>
+  </ul>
+  <div class="why"><b>為什麼這樣排：</b>小倉城＋門司港兩站距離近（JR快速14分），可一次滿足「城郭歷史」與「異國港町懷舊」兩種反差（C4.3），新幹線段時間短、体力消耗低（C3.3），焼きカレー補一道與博多美食完全不同的在地味（C5.2b 辛香開胃）。
+    <span class="pill p-c">C4.2</span><span class="pill p-c">C4.3</span><span class="pill p-c">C3.3</span><span class="pill p-c">C5.2b</span></div>
+</div>
+
+<div class="grid2" style="margin-top:14px">
+  <div class="card">
+    <h3>THE OUTLETS KITAKYUSHU <small>備選・購物向</small></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">舊スペースワールド原址，西日本最大級Outlet；門司港→JRスペースワールド駅約30分（經小倉轉乘），若想省略門司港改逛Outlet可替換。<a class="gm" href="https://www.google.com/maps/search/?api=1&query=THE+OUTLETS+KITAKYUSHU" target="_blank">地圖</a></p>
+  </div>
+  <div class="card" style="opacity:.85">
+    <h3>皿倉山展望台（夜景） <small>不建議同天併排</small> <span class="pill p-part">PARTIAL</span></h3>
+    <p style="font-size:13.5px;color:var(--sub);margin:6px 0">「億萬美元夜景」等級，但交通鏈長：小倉→八幡JR約15分→免費接駁巴士10分→纜車6分→斜坡車3分；<b style="color:var(--warn)">小倉直達巴士已於2026/3/29停駛</b>，且看夜景須待天黑才返程，整體較耗時。如有人堅持想看可獨立排一個晚上，不建議與門司港排同一天。</p>
+  </div>
+</div>
+
+<!-- ===== 怎麼選 ===== -->
+<div class="sec-title"><span class="dot"></span>四、怎麼選：北九州怎麼排進 6 天行程？</div>
+<p class="sec-sub">北九州查證後 PASS C4.2，但既有行程已有糸島＋柳川太宰府兩趟招牌外出，以下 3 種排法，推薦序如下（≤3 選，低決策疲勞）。</p>
+
+<div class="card" style="border-color:var(--accent);box-shadow:0 0 0 1px rgba(255,140,66,.25)">
+  <h3>方案 1・置換 Day4（柳川＋太宰府 → 北九州） <span class="pill p-star">推薦</span></h3>
+  <ul class="clean" style="font-size:13.5px">
+    <li><b>做法：</b>Day4 整天改排「小倉城＋門司港」，柳川川下り／太宰府整段移除。</li>
+    <li><b>優點：</b>維持原節奏（2趟外出＋2個純放空日不變 C3），新幹線比西鐵移動更省力（C3.3）；小倉城／レトロ建築多室內或有遮蔽，較不受天候影響（柳川川下り雨天易停駛，屬既有風險項）。</li>
+    <li><b>代價：</b>捨棄水鄉搖櫓、太宰府天滿宮、蒸籠鰻魚飯。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>方案 2・Day5 下午改半天北九州，三趟外出全留 <span class="pill p-pass">備選</span></h3>
+  <ul class="clean" style="font-size:13.5px">
+    <li><b>做法：</b>Day5 上午照舊自由／耍廢，下午起改「門司港半天」（可省略小倉城，抓黃昏到展望室看夜景最划算）；原 Day5 購物併入 Day6 機場前既有購物時段，屋台改到 Day3 晚上（原本泡湯後的整棟哥們夜可換成出門吃屋台）。</li>
+    <li><b>優點：</b>糸島、柳川太宰府、北九州三趟特色外出都留住，不用取捨。</li>
+    <li><b>代價：</b>Day5 少了一整個放空半天，行程調度更緊湊、決策複雜度略升。</li>
+  </ul>
+</div>
+
+<div class="card" style="opacity:.75">
+  <h3>方案 3・三趟外出＋Day3 也排出門 <span class="pill" style="background:rgba(255,122,122,.16);color:var(--warn);border:1px solid rgba(255,122,122,.4)">⚠ 不建議</span></h3>
+  <ul class="clean" style="font-size:13.5px">
+    <li><b>做法：</b>連 Day3（文化の日純放空日）也改成外出，湊滿 3 個完整外出日。</li>
+    <li><b>為什麼不建議：</b>6 天裡只剩抵離兩個半天輕鬆，中間 4 天全排滿，直接違反 C3「重開機、低決策疲勞」這條地基假設──除非確認這趟不需要放空日，否則主動建議不要這樣排。</li>
+  </ul>
+</div>
+
+<div class="why" style="margin-top:4px"><b>次要選擇：</b>能古島 vs 海の中道──推薦<b>能古島</b>（交通更短、志賀島借景更美）；想順便安排水族館才選海の中道，兩者擇一即可，不需要都排。</div>
+
+<!-- ===== 季節備忘 ===== -->
+<div class="sec-title"><span class="dot"></span>五、季節限定備忘（11/1–11/6）</div>
+<div class="food">
+  <div class="f"><b>能古島／海の中道 波斯菊</b>遲開品種花期到11月中旬，本次剛好卡到尾聲（C1.3 加分）</div>
+  <div class="f"><b>糸島牡蠣</b>11月正逢開季高峰（既有行程 Day2 已排）</div>
+  <div class="f"><b>楓葉／紅葉</b>福岡例年見頃11月中旬–12月上旬，本次11/1–11/6偏早，大濠公園/太宰府紅葉可能還沒到最佳期，勿抱過高期待</div>
+  <div class="f"><b>門司港夜景</b>全年皆宜，「日本新三大夜景城市」全國第一，秋冬空氣清澈能見度更好</div>
+</div>
+
+<!-- ===== 需查證 ===== -->
+<div class="sec-title"><span class="dot"></span>六、出發前必查證（即時資訊，勿沿用本頁估算值）</div>
+<div class="note">
+  <ul class="clean" style="margin:0">
+    <li><b>警固磚屋實際規格：</b>廁所數／洗衣機／確切門牌到薬院大通站步行時間，公開資料不足，需向 Booking.com 房源頁或業者直接確認。</li>
+    <li><b>住宿↔福岡空港：</b>轉乘路線與末班車時刻需查證，現行逐日行程 Day1/Day6 的「博多站5分到機場」需依實際多留10–15分緩衝修正。</li>
+    <li><b>新幹線／JR時刻與票價：</b>本頁「小倉15–17分／¥2,160」「門司港14分／¥340」為查證當下資料，出發前於 JR九州官網或えきねっと再核對一次（票價偶有調整）。</li>
+    <li><b>皿倉山接駁巴士：</b>2026/3/29 小倉直達巴士停駛後之替代動線（經八幡駅）需於出發前確認班次仍然有效。</li>
+    <li><b>能古渡船班次：</b>約每小時1班，實際時刻表需查證以免久候。</li>
+    <li><b>波斯菊花況：</b>出發前一週查最新開花情報，天候可能提前/延後謝花。</li>
+  </ul>
+</div>
+
+<footer>
+  福岡・博多・北九州景點候選清單 · 2026-07-04-01　|　依 CLAUDE.md 顧問規則：結論先行 · 務實保守 · 守護 C1~C6 · 即時資訊標「需查證」<br>
+  參考來源：福岡市地下鉄、JR九州、北九州市観光情報サイト北九州パレット、crossroadfukuoka（福岡縣官網）、のこのしまアイランドパーク、皿倉山ケーブルカー公式 等
+</footer>
+
+</div>
+</body>
+</html>
