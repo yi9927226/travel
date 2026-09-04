@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福岡 6天5夜 逐日行程｜2026/11/1–11/6 · Day2 別府段詳排版</title>
+<style>
+  :root{
+    --bg:#0f1419; --card:#1a2129; --card2:#202a34; --ink:#eef3f7; --sub:#9fb0bf;
+    --line:#2b3742; --accent:#ff8c42; --accent2:#3ecf8e; --blue:#5aa9e6; --gold:#f4c95d;
+    --pass:#3ecf8e; --partial:#f4c95d; --warn:#ff7a7a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(160deg,#0f1419,#131b22 60%,#0f1419);
+    color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 18px 80px}
+  header.hero{text-align:center;padding:30px 16px 14px}
+  .kanji{font-size:13px;letter-spacing:6px;color:var(--accent);font-weight:700}
+  h1{font-size:27px;margin:8px 0 6px;line-height:1.35}
+  .meta{color:var(--sub);font-size:14px}
+  .meta b{color:var(--ink)}
+  .infogrid{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:12px;margin:18px 0 6px}
+  @media(max-width:760px){.infogrid{grid-template-columns:1fr}}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .info .lbl{font-size:11.5px;letter-spacing:2px;color:var(--accent);font-weight:700}
+  .info .big{font-size:17px;font-weight:800;margin:4px 0 2px}
+  .info .sm{font-size:12.5px;color:var(--sub)}
+  .info .sm b{color:var(--ink)}
+  .updatebox{background:rgba(62,207,142,.08);border:1px solid rgba(62,207,142,.35);border-left:4px solid var(--pass);border-radius:14px;padding:14px 18px;margin:16px 0;font-size:13.5px}
+  .updatebox b{color:var(--pass)}
+  .tldr{background:linear-gradient(135deg,#22303c,#1a2129);border:1px solid var(--line);
+    border-left:4px solid var(--accent);border-radius:14px;padding:16px 20px;margin:18px 0}
+  .tldr h2{margin:0 0 8px;font-size:16px;color:var(--accent)}
+  .tldr p{margin:6px 0;font-size:14.5px}
+  .sec-title{font-size:19px;margin:34px 0 6px;display:flex;align-items:center;gap:9px}
+  .sec-title .dot{width:9px;height:9px;border-radius:50%;background:var(--accent)}
+  .sec-sub{color:var(--sub);font-size:13.5px;margin:0 0 14px}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;
+    margin:0 4px 4px 0;letter-spacing:.4px;vertical-align:middle}
+  .p-pass{background:rgba(62,207,142,.16);color:var(--pass);border:1px solid rgba(62,207,142,.4)}
+  .p-part{background:rgba(244,201,93,.15);color:var(--partial);border:1px solid rgba(244,201,93,.4)}
+  .p-blue{background:rgba(90,169,230,.15);color:var(--blue);border:1px solid rgba(90,169,230,.4)}
+  .p-star{background:rgba(255,140,66,.16);color:var(--accent);border:1px solid rgba(255,140,66,.45)}
+  .p-warn{background:rgba(255,122,122,.14);color:var(--warn);border:1px solid rgba(255,122,122,.4)}
+  .day{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0;margin:16px 0;overflow:hidden}
+  .day-head{display:flex;align-items:center;gap:14px;padding:15px 18px;background:linear-gradient(100deg,#243140,#1a2129)}
+  .daynum{flex:none;width:50px;height:50px;border-radius:12px;background:var(--accent);color:#1a1109;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1}
+  .daynum small{font-size:10px;font-weight:600}
+  .daynum b{font-size:20px}
+  .day-head .t{flex:1}
+  .day-head .t .d{font-size:13px;color:var(--gold);font-weight:700}
+  .day-head .t h3{margin:2px 0 0;font-size:18px}
+  .day-body{padding:6px 18px 16px}
+  .tl{margin:0;padding:0;list-style:none}
+  .tl li{position:relative;padding:9px 0 9px 92px;border-bottom:1px dashed var(--line)}
+  .tl li:last-child{border-bottom:none}
+  .tl .tm{position:absolute;left:0;top:9px;font-size:12.5px;color:var(--accent2);font-weight:700;width:82px}
+  .tl .ev b{color:var(--ink)}
+  .tl .ev span{color:var(--sub);font-size:13.5px}
+  .why{margin-top:10px;background:var(--card2);border-radius:10px;padding:11px 13px;font-size:13.5px}
+  .why b{color:var(--accent)}
+  .note{background:rgba(255,122,122,.08);border:1px solid rgba(255,122,122,.35);border-radius:12px;padding:12px 15px;font-size:13.5px;margin-top:10px}
+  .note b{color:var(--warn)}
+  a.gm{color:var(--blue);text-decoration:none;font-size:12.5px;border-bottom:1px dotted var(--blue)}
+  a.gm:hover{color:#9cd}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:760px){.grid3{grid-template-columns:1fr}}
+  .cand{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:13px 14px;font-size:13.5px}
+  .cand h4{margin:0 0 4px;font-size:15px}
+  .cand .rank{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px}
+  ul.clean{margin:6px 0;padding-left:18px}
+  ul.clean li{margin:4px 0}
+  .chk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:13px 0}
+  .chk table{width:100%;border-collapse:collapse;font-size:13.5px}
+  .chk th,.chk td{border-bottom:1px dashed var(--line);padding:8px 8px;text-align:left;vertical-align:top}
+  .chk tr:last-child td{border-bottom:none}
+  .chk th{color:var(--sub);font-weight:700;font-size:12.5px}
+  footer{text-align:center;color:var(--sub);font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kanji">FUKUOKA · 福岡</div>
+  <h1>福岡 6天5夜 逐日行程</h1>
+  <div class="meta"><b>2026/11/1（日）– 11/6（五）</b>｜7 人團 · 一棟住到底｜2026-08-28-02 · Day2 別府段詳排（Day5 未定）</div>
+</header>
+
+<!-- 機票與住宿 -->
+<div class="infogrid">
+  <div class="info">
+    <div class="lbl">去程 ✈ 11/1（日）</div>
+    <div class="big">台灣虎航 IT240</div>
+    <div class="sm">TPE <b>06:45</b> → FUK <b>10:05</b>（日本時間，+1hr 時差）<br>早班機：約 <b>04:15–04:30</b> 前抵桃機櫃檯</div>
+  </div>
+  <div class="info">
+    <div class="lbl">回程 ✈ 11/6（五）</div>
+    <div class="big">亞航 AK1511</div>
+    <div class="sm">FUK <b>17:00</b> → TPE <b>18:30</b><br>約 <b>15:00</b> 前抵福岡機場<b>國際線</b>櫃檯</div>
+  </div>
+  <div class="info">
+    <div class="lbl">住宿（已訂）🏠 11/1–11/6 五晚</div>
+    <div class="big">警固磚屋 Kego Brick House</div>
+    <div class="sm">福岡市中央區警固3丁目3-11 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=福岡市中央区警固3丁目3-11" target="_blank">地圖</a><br>最近站 <b>薬院大通駅</b>（七隈線）步行約 7 分；薬院大通 ⇄ 博多站 地鐵直達約 <b>9–11 分</b></div>
+  </div>
+</div>
+
+<div class="updatebox">
+  <b>2026-08-28-02 更新：</b>把 <b>Day2 的別府段排到可執行的程度</b>——查證了由布院⇄鉄輪的實際巴士班次、地獄門票與營業時間、別府回博多的特急班次，並給出三個方案與逐時時間軸。<b>關鍵發現：由布院站前 13:35 的「ゆふりん」是唯一直達海地獄前的班車，錯過就等於當天去不成地獄。</b>另已查證由布院之森 11/1–11/29 每天都是「全列車運転」，你們的日期沒有停駛問題。其餘天次沿用 -01 版。
+</div>
+
+<div class="tldr">
+  <h2>結論先行（TL;DR）</h2>
+  <p>① 這版是「外出較多」的排法：由布院、相島、太宰府柳川三趟外出＋頭尾兩個購物日，比 07-04 版緊湊，Day5 建議保留彈性（放空或北九州擇一）。</p>
+  <p>② <b>要事先搶的只有由布院之森指定席</b>（10/2 早上 10:00 日本時間開賣）；柳川川下り用西鐵套票當天買，相島船票現場買，別府地獄門票現場買。</p>
+  <p>③ 每晚回警固磚屋大本營；市區移動以「薬院大通 ⇄ 博多 9–11 分直達」為主軸。</p>
+</div>
+
+<!-- ===== 逐日行程 ===== -->
+<div class="sec-title"><span class="dot"></span>一、逐日行程</div>
+<p class="sec-sub">時間為概抓，班次類（列車／船班／巴士）出發前一律再查證。標籤：<span class="pill p-warn">需購票</span>要事先買或現場買票、<span class="pill p-part">需查證</span>出發前確認。</p>
+
+<!-- Day 1 -->
+<div class="day">
+  <div class="day-head">
+    <div class="daynum"><small>DAY</small><b>1</b></div>
+    <div class="t"><div class="d">11/1（日）· 抵達日</div><h3>博多車站百貨日 ＋ 傍晚入住</h3></div>
+  </div>
+  <div class="day-body">
+    <ul class="tl">
+      <li><span class="tm">04:30</span><div class="ev"><b>桃園機場集合</b> <span>06:45 起飛的早班機，抓兩小時前到櫃檯</span></div></li>
+      <li><span class="tm">10:05</span><div class="ev"><b>抵福岡機場</b> <span>入境約 40–60 分 → 地鐵空港線 2 站約 5 分到博多站</span></div></li>
+      <li><span class="tm">11:30</span><div class="ev"><b>博多站寄放行李（投幣儲物櫃）</b> <span>JR 博多城各樓層與地鐵層都有置物櫃；7 人行李多，找不到大櫃可改用車站臨時寄物服務</span></div></li>
+      <li><span class="tm">12:00</span><div class="ev"><b>午餐：車站內解決</b> <span>Shin Shin（KITTE 博多）、一風堂、くうてん美食樓層（AMU PLAZA 9–10F）· <a class="gm" href="https://www.google.com/maps/search/?api=1&query=KITTE博多" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">13:00</span><div class="ev"><b>逛 JR 博多城百貨群（可耗一整天）</b> <span><b>任天堂福岡店 Nintendo FUKUOKA＋寶可夢中心</b>（AMU PLAZA 博多 8F 同層）、博多阪急、KITTE 博多、東急 HANDS、屋上「燕子森林廣場」· <a class="gm" href="https://www.google.com/maps/search/?api=1&query=Nintendo+FUKUOKA+アミュプラザ博多" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">15:30</span><div class="ev"><b>取行李 → 移動 check-in</b> <span>博多站搭七隈線 9–11 分到薬院大通站，步行約 7 分抵警固磚屋；分房、放行李</span></div></li>
+      <li><span class="tm">18:30</span><div class="ev"><b>晚餐：もつ鍋（牛腸鍋）</b> <span>おおやま／一藤，7 人需先訂包廂 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=博多もつ鍋おおやま本店" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">21:00</span><div class="ev"><b>超市採買＋回住處放鬆</b> <span>把幾天的啤酒宵夜備好，客廳開喝</span></div></li>
+    </ul>
+    <div class="why"><b>為什麼這樣排：</b>抵達日不遠行，行李丟儲物櫃就地把博多站百貨逛好逛滿——任天堂店與寶可夢中心就在站樓上，逛到可以入住再走。<span class="pill p-part">需查證</span>警固磚屋 check-in 時間（一般 15:00／16:00 後）與儲物櫃大櫃位置。</div>
+    <div class="note"><b>提醒：</b>週日下午的任天堂店／寶可夢中心人潮多，可能需排隊入場；想買限定品建議一到博多先上 8F 看狀況再吃午餐。</div>
+  </div>
+</div>
+
+<!-- Day 2 -->
+<div class="day" id="day2">
+  <div class="day-head">
+    <div class="daynum"><small>DAY</small><b>2</b></div>
+    <div class="t"><div class="d">11/2（一）· 外出日 · 2026-08-28 詳排</div><h3>由布院之森 → 由布院 →（別府 鉄輪地獄）<span class="pill p-warn">需購票</span></h3></div>
+  </div>
+  <div class="day-body">
+
+    <div class="why" style="margin:10px 0 14px">
+      <b>先講結論：這天成不成，卡在一班巴士。</b>由布院站前 <b>13:35</b> 的觀光快速「ゆふりん」是唯一一班<b>直達海地獄前</b>的車（43 分、¥1,000、不用轉車）。錯過它，下一個能到地獄的接法要轉車、<b>16:02 才到</b>，而七大地獄 <b>17:00 準時關門</b>，等於白跑。所以由布院只有 <b>11:31–13:30 約兩小時</b>，逛完就要準時到站前巴士中心。
+    </div>
+
+    <!-- 三個方案 -->
+    <div class="grid3">
+      <div class="cand" style="border-color:var(--accent)">
+        <div class="rank">方案 A ★ 推薦</div>
+        <h4>由布院先、地獄後</h4>
+        搭觀光列車去（符合原本想法），由布院 2 小時，下午鉄輪五地獄 2 小時，晚上特急ソニック回博多。<b>不用早起</b>，但 13:35 那班車不能錯過。
+      </div>
+      <div class="cand">
+        <div class="rank">方案 B · 次推</div>
+        <h4>地獄先、由布院後</h4>
+        早上直奔別府逛地獄（2 小時 45 分），下午轉由布院（2 小時 40 分），回程才搭由布院之森 6 號。<b>時間最寬裕</b>，代價是 7:31 的車、六點多要起床。
+      </div>
+      <div class="cand">
+        <div class="rank">方案 C · 最鬆</div>
+        <h4>不去別府</h4>
+        整天泡在由布院，湯之坪街道、金鱗湖、café 慢慢走，17:17 搭由布院之森 6 號回博多（19:27 到）。想睡到自然醒就選這個。
+      </div>
+    </div>
+
+    <!-- 方案 A 時間軸 -->
+    <div class="sec-sub" style="margin:22px 0 4px;color:var(--accent);font-weight:700;font-size:15px">方案 A（推薦）逐時時間軸</div>
+    <ul class="tl">
+      <li><span class="tm">09:17</span><div class="ev"><b>博多 → 由布院之森 1 號</b> <span>全車指定席，2 小時 14 分</span></div></li>
+      <li><span class="tm">11:31</span><div class="ev"><b>抵由布院</b> <span>出站先確認回程巴士站位置（站前巴士中心就在出站右手邊）</span></div></li>
+      <li><span class="tm">11:35</span><div class="ev"><b>湯之坪街道（邊走邊吃）</b> <span>金賞可樂餅、B-speak 蛋糕捲、市糸屋布丁；<b>這天不排正式午餐</b>，正餐留到鉄輪吃地獄蒸 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=湯の坪街道" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">12:20</span><div class="ev"><b>金鱗湖</b> <span>街道走到底即達，站前步行約 25 分；湖畔繞一圈 15 分足夠 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=金鱗湖" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">13:00</span><div class="ev"><b>往回走到車站</b> <span>回程約 25 分，<b>13:25 前務必到站前巴士中心</b></span></div></li>
+      <li><span class="tm">13:35</span><div class="ev"><b>觀光快速「ゆふりん」→ 海地獄前</b> <span>¥1,000／人、43 分、直達不轉車 · 由布院駅前バスセンター 發車</span></div></li>
+      <li><span class="tm">14:18</span><div class="ev"><b>抵海地獄前</b> <span>先<b>不</b>進海地獄，沿路往下走約 10 分到鉄輪站牌一帶吃飯</span></div></li>
+      <li><span class="tm">14:30</span><div class="ev"><b>午餐：地獄蒸し工房 鉄輪</b> <span>用溫泉蒸氣自己蒸海鮮蔬菜，鉄輪招牌體驗；假日常要抽整理券等候，人多可改吃附近食堂（營業時間<span class="pill p-part" style="margin-left:3px">需查證</span>）· <a class="gm" href="https://www.google.com/maps/search/?api=1&query=地獄蒸し工房+鉄輪" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">15:10</span><div class="ev"><b>五地獄由下往上走</b> <span>白池 → 鬼山 → かまど → 鬼石坊主 → 海地獄，<b>終點剛好是回程站牌</b>；在白池地獄買<b>共通観覧券 ¥2,400</b></span></div></li>
+      <li><span class="tm">16:50</span><div class="ev"><b>海地獄逛完直接到站牌</b> <span>出口步行 1 分即「海地獄前」</span></div></li>
+      <li><span class="tm">17:03</span><div class="ev"><b>海地獄前 → 別府駅西口</b> <span>亀の井バス 2 番鉄輪線，¥390、26 分（2・5・24・41 番皆可到別府站）</span></div></li>
+      <li><span class="tm">17:53</span><div class="ev"><b>別府 → 特急ソニック 50 號 → 博多</b> <span>直達不轉車，1 小時 57 分；自由席合計 ¥6,380／人</span></div></li>
+      <li><span class="tm">19:50</span><div class="ev"><b>抵博多</b> <span>轉七隈線 9–11 分到薬院大通，步行 7 分回警固，約 20:20 到家</span></div></li>
+    </ul>
+
+    <!-- 五地獄路線 -->
+    <div class="why" style="margin-top:14px">
+      <b>鉄輪五地獄怎麼走（全程步行，約 1 小時 40 分剛好）：</b><br>
+      吃完飯從下方開始往上走：<b>白池地獄</b>（乳白池，15 分）→ <b>鬼山地獄</b>（鱷魚，15 分）→ <b>かまど地獄</b>（一到六丁目一次看完各種泉，20 分）→ 步行約 7 分 → <b>鬼石坊主地獄</b>（灰泥冒泡像光頭，10 分）→ 隔壁 <b>海地獄</b>（鈷藍色、98°C，園區最大也最精彩，抓 25 分壓軸）。這個順序的好處是<b>逛完就在回程站牌旁</b>，不用走回頭路。<br>
+      <span class="pill p-warn">刻意不排</span><b>血の池地獄・龍巻地獄</b>在 3 公里外的亀川一帶，來回要再加一趟巴士約 40–50 分，這天塞不進去。共通券效期是<b>購買日＋隔天兩天</b>，但你們隔天不在別府，等於就是放棄那兩個。
+    </div>
+
+    <!-- 費用 -->
+    <div class="chk" style="margin-top:14px">
+      <div style="font-size:14px;font-weight:700;margin-bottom:6px">方案 A 一人份費用（交通＋門票，不含餐）</div>
+      <table>
+        <tr><th>項目</th><th>金額</th><th>備註</th></tr>
+        <tr><td>由布院之森 博多→由布院</td><td>¥5,600</td><td>網路限定「九州ネットきっぷ」；車站購票為 ¥6,130</td></tr>
+        <tr><td>ゆふりん 由布院→海地獄前</td><td>¥1,000</td><td>上車付現／IC 卡</td></tr>
+        <tr><td>地獄共通観覧券</td><td>¥2,400</td><td>7 地獄通用；單買一館 ¥500，逛 5 館買共通券較划算</td></tr>
+        <tr><td>巴士 海地獄前→別府站</td><td>¥390</td><td></td></tr>
+        <tr><td>ソニック 別府→博多（自由席）</td><td>¥6,380</td><td>運賃 ¥4,180＋自由席特急券 ¥2,200；網路票可能更便宜<span class="pill p-part" style="margin-left:4px">需查證</span></td></tr>
+        <tr><td><b>合計</b></td><td><b>約 ¥15,770</b></td><td>以 ¥1≈NT$0.21 粗估約 <b>NT$3,300</b>／人（匯率請自行以當時為準）</td></tr>
+      </table>
+    </div>
+
+    <!-- 方案 B -->
+    <div class="sec-sub" style="margin:22px 0 4px;color:var(--gold);font-weight:700;font-size:15px">方案 B（次推）逐時時間軸 — 地獄先、由布院後</div>
+    <ul class="tl">
+      <li><span class="tm">07:31</span><div class="ev"><b>博多 → 特急にちりんシーガイア 5 號 → 別府</b> <span>直達 2 小時 22 分，¥6,380／人（06:50 前要出門）</span></div></li>
+      <li><span class="tm">09:53</span><div class="ev"><b>抵別府</b> <span>西口轉亀の井バス 2・5・24・41 番往鉄輪，約 20–26 分</span></div></li>
+      <li><span class="tm">10:30</span><div class="ev"><b>鉄輪五地獄</b> <span>時間充裕版，中午在地獄蒸し工房吃飯</span></div></li>
+      <li><span class="tm">13:21</span><div class="ev"><b>海地獄前 → 由布院</b> <span>別府公園前轉 36 番湯布院線，約 1 小時 11 分、¥1,460</span></div></li>
+      <li><span class="tm">14:32</span><div class="ev"><b>由布院</b> <span>湯之坪街道＋金鱗湖，2 小時 40 分慢慢逛</span></div></li>
+      <li><span class="tm">17:17</span><div class="ev"><b>由布院之森 6 號 → 博多 19:27</b> <span>觀光列車改搭回程，一樣坐得到</span></div></li>
+    </ul>
+    <div class="why"><b>方案 B 的取捨：</b>兩邊時間都寬裕（地獄 2 小時 45、由布院 2 小時 40），也不用怕錯過那班 13:35；代價是要早起，而且去程搭的是普通特急、觀光列車體驗挪到回程（黃昏光線其實也好看）。<b>如果你們比較怕趕，選這個。</b></div>
+
+    <div class="note"><b>共同注意事項：</b>
+      <ul class="clean" style="margin:6px 0 0">
+        <li><b>地獄營業時間 8:00–17:00，年中無休</b>，17:00 是關門不是最後入場，抓 16:45 收工。</li>
+        <li><b>由布院之森指定席要搶</b>：乘車日 1 個月前（10/2）早上 10:00 日本時間開賣，去回各 7 人。方案 A 只要訂去程 1 號，方案 B 只要訂回程 6 號。</li>
+        <li>11/2 是<b>週一（平日）</b>，「ゆふりん」平日出的是一般車輛而非觀光塗裝車，班次照跑。</li>
+        <li>ソニック自由席 7 人不一定坐得在一起，介意的話改訂指定席。</li>
+        <li>巴士時刻取自 Yahoo 路線情報（2026/11/2 查詢），亀の井巴士可能改點，<b>出發前一週再查一次</b>。<span class="pill p-part">需查證</span></li>
+        <li>官網有一則「龍巻地獄の間欠泉についてお知らせ」（2026/01/15），若之後想專程去龍巻地獄看間歇泉，先確認噴發狀況。</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Day 3 -->
+<div class="day">
+  <div class="day-head">
+    <div class="daynum"><small>DAY</small><b>3</b></div>
+    <div class="t"><div class="d">11/3（二）· 文化之日（日本國定假日）</div><h3>相島看貓（上午）＋ 市區三點（下午）<span class="pill p-warn">船票現場買</span></h3></div>
+  </div>
+  <div class="day-body">
+    <ul class="tl">
+      <li><span class="tm">~08:00</span><div class="ev"><b>出發往新宮</b> <span>博多站搭 JR 鹿兒島本線約 20–25 分到<b>福工大前站</b> → 社區巴士マリンクス或計程車約 5–10 分到<b>新宮漁港</b> · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=新宮漁港渡船場" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">上午</span><div class="ev"><b>町營渡船「しんぐう」→ 相島</b> <span>航程約 20 分；<b>船票現場買</b>（單程數百日圓）。一天僅約 5–6 班，去回班次先查好</span></div></li>
+      <li><span class="tm">~12:30</span><div class="ev"><b>相島看貓＋環島散步</b> <span>貓多聚在漁港邊；島上餐飲少，可先在博多買好輕食 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=相島+新宮町" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">14:30</span><div class="ev"><b>搭船回程 → 返市區</b> <span>原路回博多後轉地鐵</span></div></li>
+      <li><span class="tm">15:30</span><div class="ev"><b>櫛田神社</b> <span>祇園站步行 5 分，博多祇園山笠總本社 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=櫛田神社+福岡" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">16:30</span><div class="ev"><b>大濠公園</b> <span>湖畔散步（時間夠可順福岡城跡）· <a class="gm" href="https://www.google.com/maps/search/?api=1&query=大濠公園" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">17:30</span><div class="ev"><b>福岡塔（看夕陽＋夜景）</b> <span>11 月初日落約 17:30，卡這時段上塔最划算 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=福岡タワー" target="_blank">地圖</a></span></div></li>
+    </ul>
+    <div class="why"><b>為什麼這樣排：</b>相島船班少、早去早回最保險；下午三個點依「祇園 → 大濠 → 百道濱」由東往西排，最後福岡塔剛好接夕陽夜景。三點都靠地鐵空港線／巴士可串。</div>
+    <div class="note"><b>注意：</b>① 11/3 是<b>文化之日假日</b>，渡船有客滿風險（無法預約），建議搭最早班或提早到港排隊；② 渡船遇風浪會停駛，前一天查新宮町官網航班公告，停駛就跟 Day5 對調；③ 若當天想鬆一點，市區三點砍掉大濠公園也順。<span class="pill p-part">需查證</span>船班時刻、マリンクス巴士時刻。</div>
+  </div>
+</div>
+
+<!-- Day 4 -->
+<div class="day">
+  <div class="day-head">
+    <div class="daynum"><small>DAY</small><b>4</b></div>
+    <div class="t"><div class="d">11/4（三）· 外出日</div><h3>太宰府天滿宮 ＋ 柳川川下り <span class="pill p-warn">需購票</span></h3></div>
+  </div>
+  <div class="day-body">
+    <ul class="tl">
+      <li><span class="tm">~09:00</span><div class="ev"><b>西鐵福岡（天神）站買「太宰府・柳川觀光套票」</b> <span>含天神⇄太宰府⇄柳川電車來回＋川下り乘船券，當天櫃檯可買；警固走路約 13 分即到天神 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=西鉄福岡天神駅" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">~09:30</span><div class="ev"><b>天神 → 太宰府</b> <span>西鐵約 30 分（西鐵二日市轉車）</span></div></li>
+      <li><span class="tm">10:00</span><div class="ev"><b>太宰府天滿宮＋參道</b> <span>梅枝餅現烤現吃、星巴克概念店；本殿整修期間為仮殿參拜（完工時程需查證）· <a class="gm" href="https://www.google.com/maps/search/?api=1&query=太宰府天満宮" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">12:00</span><div class="ev"><b>太宰府 → 柳川</b> <span>西鐵約 50 分（二日市轉特急）</span></div></li>
+      <li><span class="tm">13:00</span><div class="ev"><b>午餐：鰻魚蒸籠飯（うなぎのせいろ蒸し）</b> <span>元祖本吉屋等老店，柳川名物 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=柳川+元祖本吉屋" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">14:30</span><div class="ev"><b>柳川川下り（搖櫓遊船）</b> <span>約 60–70 分順水路穿柳川市區，套票已含船票 · <a class="gm" href="https://www.google.com/maps/search/?api=1&query=柳川川下り" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">~16:30</span><div class="ev"><b>柳川 → 天神</b> <span>西鐵特急約 50 分，晚餐回天神／警固吃</span></div></li>
+    </ul>
+    <div class="why"><b>為什麼這樣排：</b>太宰府＋柳川同一條西鐵線，官方套票一張搞定車票＋船票，決策疲勞最低；上午先太宰府避人潮、下午順線往柳川坐船，回程特急直達天神。</div>
+    <div class="note"><b>注意：</b>① 一艘船約可坐 10 多人，7 人同船通常沒問題，假日船班等候時間長，到碼頭先劃位再吃飯也可；② 川下り遇雨或強風可能停駛，停駛就改逛太宰府久一點＋提早回市區；③ 套票票價與船班時刻<span class="pill p-part">需查證</span>。</div>
+  </div>
+</div>
+
+<!-- Day 5 -->
+<div class="day">
+  <div class="day-head">
+    <div class="daynum"><small>DAY</small><b>5</b></div>
+    <div class="t"><div class="d">11/5（四）· 浮動未定</div><h3>保留彈性｜三個候選（依推薦序）</h3></div>
+  </div>
+  <div class="day-body">
+    <div class="grid3" style="margin-top:12px">
+      <div class="cand">
+        <div class="rank">候選 1（推薦）</div>
+        <h4>北九州一日遊</h4>
+        門司港レトロ＋小倉城。07-04 版原 Day4，交通已查證：博多→小倉新幹線 15–17 分（約 ¥2,160）＋小倉→門司港 JR 14 分（約 ¥340）。港町懷舊＋燒咖哩，室內點多不怕天候。
+      </div>
+      <div class="cand">
+        <div class="rank">候選 2</div>
+        <h4>糸島包車・牡蠣小屋</h4>
+        11 月正值牡蠣開季，炭烤生蠔＋海岸兜風（夫婦岩）。9 人座包車單程 40–60 分，需提前訂車並告知警固上車。<span class="pill p-part">需查證</span>包車報價、小屋開季日。
+      </div>
+      <div class="cand">
+        <div class="rank">候選 3（最鬆）</div>
+        <h4>市區放空日</h4>
+        睡到自然醒、桑拿ウェルビー福岡、天神購物、晚上中洲屋台（7 人需分攤或挑大攤）。前四天連跑三趟外出，想休就選這個。
+      </div>
+    </div>
+    <div class="why" style="margin-top:12px"><b>怎麼決定：</b>可以出發前看天氣與體力再定——天氣好挑 1 或 2，累了就 3。若 Day3 相島因風浪停駛，也可把相島移來這天補。</div>
+  </div>
+</div>
+
+<!-- Day 6 -->
+<div class="day">
+  <div class="day-head">
+    <div class="daynum"><small>DAY</small><b>6</b></div>
+    <div class="t"><div class="d">11/6（五）· 回程日</div><h3>LaLaport 福岡購物 → 下午班機回台</h3></div>
+  </div>
+  <div class="day-body">
+    <ul class="tl">
+      <li><span class="tm">~09:30</span><div class="ev"><b>退房（警固磚屋）</b> <span>行李帶著走；退房時間<span class="pill p-part" style="margin-left:4px">需查證</span></span></div></li>
+      <li><span class="tm">10:30</span><div class="ev"><b>前往 LaLaport 福岡（ららぽーと福岡）</b> <span>博多站搭 JR 一站到竹下站約 3 分＋步行約 10 分；行李寄館內投幣櫃（大型櫃數量需查證）· <a class="gm" href="https://www.google.com/maps/search/?api=1&query=ららぽーと福岡" target="_blank">地圖</a></span></div></li>
+      <li><span class="tm">10:45</span><div class="ev"><b>門口先看實物大 ν鋼彈立像</b> <span>整點有燈光演出；館內逛街＋最後伴手禮（明太子、通りもん可留機場補）</span></div></li>
+      <li><span class="tm">12:30</span><div class="ev"><b>午餐：館內美食街</b> <span>吃完做最後採買</span></div></li>
+      <li><span class="tm">14:00</span><div class="ev"><b>出發往機場（國際線）</b> <span>推薦 7 人分乘 2 台計程車直達國際線航廈約 10–15 分（LaLaport 離機場很近）；省錢版：竹下→博多 JR＋地鐵到福岡空港（國內線）→ 免費接駁巴士約 10–15 分到國際線</span></div></li>
+      <li><span class="tm">15:00</span><div class="ev"><b>抵國際線櫃檯</b> <span>報到、退稅、免稅店</span></div></li>
+      <li><span class="tm">17:00</span><div class="ev"><b>AK1511 起飛</b> <span>18:30 抵桃園（台灣時間）</span></div></li>
+    </ul>
+    <div class="why"><b>為什麼這樣排：</b>LaLaport 在博多站南邊一站、離機場也近，退房後順路購物、吃完午餐直奔機場，動線最短。<b>注意地鐵「福岡空港」站在國內線</b>，走國際線要多一段接駁巴士，時間要多抓——所以更推計程車直達。</div>
+    <div class="note"><b>提醒：</b>亞航 AK1511 冬季（11 月）班表出發前要再對一次是否改點（現況.md §3 既有風險項）；計程車車資與 LaLaport 大型置物櫃<span class="pill p-part">需查證</span></div>
+  </div>
+</div>
+
+<!-- ===== 購票清單 ===== -->
+<div class="sec-title"><span class="dot"></span>二、購票／預約清單</div>
+<div class="chk">
+  <table>
+    <tr><th>項目</th><th>怎麼買</th><th>時機</th></tr>
+    <tr><td><b>由布院之森 指定席</b>（Day2，×7 人）</td><td>JR 九州網路訂票（需 Web 會員）或博多站綠色窗口</td><td><b>10/2（四）日本時間 10:00 開賣</b>（台灣時間 09:00），開賣即搶。方案A訂去程1號／方案B訂回程6號</td></tr>
+    <tr><td><b>別府 地獄共通観覧券</b>（Day2）</td><td>任一地獄售票口現場買，大人 ¥2,400</td><td>不需預約；8:00–17:00 年中無休</td></tr>
+    <tr><td><b>ソニック 別府→博多</b>（Day2 方案A）</td><td>自由席可當天上車；想坐一起就訂指定席</td><td>17:53 ソニック50號直達，19:50 到博多</td></tr>
+    <tr><td><b>太宰府・柳川觀光套票</b>（Day4，含川下り船票）</td><td>西鐵福岡（天神）站櫃檯</td><td>當天買即可，假日建議 9 點前到</td></tr>
+    <tr><td><b>相島渡船</b>（Day3）</td><td>新宮漁港現場買票，不能預約</td><td>前一天查船班與停航公告，當天提早到港</td></tr>
+    <tr><td><b>もつ鍋等 7 人包廂</b>（Day1 晚）</td><td>電話／網路訂位</td><td>出發前 1–2 週訂</td></tr>
+    <tr><td><b>回程機票班表確認</b>（AK1511）</td><td>亞航官網／訂位信</td><td>出發前 1 週再對一次</td></tr>
+  </table>
+</div>
+
+<footer>
+  福岡逐日行程 · 2026-08-28-01（新版草案：Day2 由布院、Day3 相島、Day4 太宰府柳川、Day5 未定）<br>
+  取代 2026-07-04-01 版為現行草案；現況.md 尚未同步更新 ｜ 班次・票價等即時資訊出發前需查證
+</footer>
+
+</div>
+</body>
+</html>
